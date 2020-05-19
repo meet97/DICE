@@ -10,9 +10,8 @@ export default function Copyright() {
             height: '10%'}}>
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Harman Saini
-            </Link>{' '}
+                Group 2
+            {' '}
             {new Date().getFullYear()}
             {'.'}
         </Typography>

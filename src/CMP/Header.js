@@ -16,7 +16,7 @@ export default function Header() {
             <Link to="/"><img src={Saskatchewan_Polytechnic_4C} alt={"Hello"} width={'200px'} height={'100px'}/>
             </Link>
         </div>
-            <div style={{right:'-780px',bottom: '-50px',position: 'relative'}}>
+            <div style={{right:'-750px',bottom: '-50px',position: 'relative'}}>
                 <nav>
                 <ul className="StyleUl">
                     <Link to="/Login">
@@ -50,6 +50,12 @@ export default function Header() {
                     </Link>
                     <li>
                         |
+                    </li>
+                    <li>
+                        Contact
+                    </li>
+                    <li>
+                         |
                     </li>
                     <Link to="/Login">
                         <li>
