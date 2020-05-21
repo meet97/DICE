@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 
 export default function Copyright() {
     return (
-        <div style={{position:'fixed',
+        <div style={{position:'static',
             bottom:'10px',
             width: '100%',
             height: '10%'}}>

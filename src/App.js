@@ -6,6 +6,7 @@ import Copyright from './CMP/Footer';
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import SignUp from "./CMP/SignUp";
 import ForgetPassword from "./CMP/ForgetPassword";
+import Services from "./CMP/Services";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/Login" component={SignIn}/>
         <Route path="/SignUp" component={SignUp}/>
         <Route path="/Forget" component={ForgetPassword}/>
+        <Route path="/Services" component={Services}/>
         </Switch>
     </div>
       </Router>
@@ -25,6 +27,7 @@ function App() {
 const home = () => (
     <div id="App">
         <Header/>
+        <Services/>
         <Copyright/>
     </div>
 )

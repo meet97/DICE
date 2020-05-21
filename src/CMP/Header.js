@@ -9,6 +9,7 @@ export default function Header() {
         <div className="header" style={{position: 'fixed',
             backgroundColor: 'rebeccapurple',
             width: '100%',
+            left:'0px',
             top:'0',
             height: '100px'
             }}>
@@ -16,7 +17,7 @@ export default function Header() {
             <Link to="/"><img src={Saskatchewan_Polytechnic_4C} alt={"Hello"} width={'200px'} height={'100px'}/>
             </Link>
         </div>
-            <div style={{right:'-750px',bottom: '-50px',position: 'relative'}}>
+            <div style={{right:'-700px',bottom: '-50px',position: 'relative'}}>
                 <nav>
                 <ul className="StyleUl">
                     <Link to="/Login">
@@ -35,7 +36,7 @@ export default function Header() {
                     <li>
                         |
                     </li>
-                    <Link to="/Login">
+                    <Link to="/Services">
                         <li>
                             Services
                         </li>
