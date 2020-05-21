@@ -1,6 +1,6 @@
 
 import React from "react";
-import Saskatchewan_Polytechnic_4C from './Saskatchewan_Polytechnic_4C.jpg'
+import logo from '../img/logo.png'
 import {Link} from 'react-router-dom';
 
 export default function Header() {
@@ -14,7 +14,7 @@ export default function Header() {
             height: '100px'
             }}>
         <div style={{left:'10px',position: 'absolute'}}>
-            <Link to="/"><img src={Saskatchewan_Polytechnic_4C} alt={"Hello"} width={'200px'} height={'100px'}/>
+            <Link to="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
             </Link>
         </div>
             <div style={{right:'-700px',bottom: '-50px',position: 'relative'}}>
@@ -28,7 +28,7 @@ export default function Header() {
                     <li>
                         |
                     </li>
-                    <Link to="/Login">
+                    <Link to="/People">
                         <li>
                             People
                         </li>
