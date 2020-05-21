@@ -27,7 +27,6 @@ function App() {
 const home = () => (
     <div id="App">
         <Header/>
-        <Services/>
         <Copyright/>
     </div>
 )
