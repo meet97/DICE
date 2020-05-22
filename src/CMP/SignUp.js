@@ -118,9 +118,10 @@ export default function SignUp() {
                     </Grid>
                 </form>
             </div>
-
         </Container>
-    <Copyright/>
+    <div style={{position:"relative",bottom:"-200px"}}>
+        <Copyright/>
+    </div>
 </div>
     );
 }

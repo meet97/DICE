@@ -3,10 +3,12 @@ import './App.css';
 import SignIn from "./CMP/Login";
 import Header from "./CMP/Header";
 import Copyright from './CMP/Footer';
+import People from './CMP/People';
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import SignUp from "./CMP/SignUp";
 import ForgetPassword from "./CMP/ForgetPassword";
 import HomePage from "./CMP/HomePage";
+import Services from "./CMP/Services";
 
 function App() {
   return (
@@ -31,6 +33,6 @@ const home = () => (
         <HomePage/>
         <Copyright/>
     </div>
-);
+)
 
 export default App;

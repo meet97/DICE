@@ -43,14 +43,14 @@ export default function SignIn() {
             <Header/>
             <Container component="main" maxWidth="xs">
                 <CssBaseline/>
-                <div className={classes.paper} style={{top: '50px', position: 'relative'}}>
+                <div className={classes.paper} style={{top: '50px', position: 'relative', height:"100%"}}>
                     <Avatar className={classes.avatar}>
                         <LockOutlinedIcon/>
                     </Avatar>
                     <Typography component="h1" variant="h5">
                         Sign in
                     </Typography>
-                    <form className={classes.form} noValidate>
+                    <form className={classes.form} >
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -62,6 +62,7 @@ export default function SignIn() {
                             name="email"
                             autoComplete="email"
                             autoFocus
+
                         />
                         <TextField
                             variant="outlined"
@@ -104,7 +105,9 @@ export default function SignIn() {
                     </form>
                 </div>
             </Container>
-            <Copyright/>
+            <div style={{position:"relative",bottom:"-200px"}}>
+                <Copyright/>
+            </div>
         </div>
     );
 
