@@ -1,28 +1,29 @@
- import React from "react";
- import Header from "./Header";
- import Copyright from "./Footer";
- import HomeContent from "./HomeContent";
+import React from "react";
+import Header from "./Header";
+import Copyright from "./Footer";
+import HomeContent from "./HomeContent";
+import Services from "./Services";
+import People from "./People";
 
 
 
- class HomePage extends React.Component {
+class HomePage extends React.Component {
 
 
-     render()
-     {
-         return (
+    render()
+    {
+        return (
 
-                <div>
-                    <Header/>
+            <div id="Home">
+                <HomeContent/>
 
-                    <HomeContent/>
+                <Header/>
 
-                    <Copyright/>
-                </div>
+            </div>
 
-         )
-     }
+        )
+    }
 
- }
+}
 
- export default HomePage;
+export default HomePage;

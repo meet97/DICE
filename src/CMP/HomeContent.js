@@ -1,4 +1,6 @@
 import React from 'react';
+import Services from "./Services";
+import People from "./People";
 // import { Slide } from 'react-slideshow-image';
 
 
@@ -26,7 +28,8 @@ const homeContent = () => {
 
 
 
-        <div className="HomePage">
+        <div className="HomePage" id="About">
+
             {/*<Slide {...properties}>*/}
             {/*    <div className="each-slide">*/}
             {/*        <div style={{'backgroundImage': `url(${slideImages[0]})`}}>*/}
@@ -47,29 +50,31 @@ const homeContent = () => {
 
             <h1 style={{font:'Arial',position:'absolute', padding: '10px',top: '150px', left:'30%'}}> Digital Integration Centre of Excellence </h1>
             <div style={{position:'absolute',top:'200px',font:'Arial',alignment:'center',padding: '15%', margin: '50px',fontSize:'20px', zIndex:'999'}}>
-            <p>
+                <p>
 
-                                 Data stewardship is key to the services that DICE offers. DICE uses AI and ML techniques to
-                                    obtain patterns that exist in the data. Those patterns become the information that provides
-                                     insights to our industry partners.
+                    Data stewardship is key to the services that DICE offers. DICE uses AI and ML techniques to
+                    obtain patterns that exist in the data. Those patterns become the information that provides
+                    insights to our industry partners.
 
-                                     AI and ML are broad topics, so DICE has focused its work on three key areas:
-                                  <ul className='HomeUl' style={{color:"black"}}>
-                                               <li> asset management (AM)</li>
-                                            <li>time sensitive networking (TSN)</li>
-                                            <li>mesh networks (MN)</li>
-                                        </ul>
-                                 Techniques used to find patterns transcend sector-specific solutions – allowing, for
-                             example, for strategies learned on automotive assembly lines to be applied to ore processing or
-                             autonomous weeding. In each of these three areas, students in such fields as information
-                             technology (IT), mining, geographic information systems (GIS), Electronic Systems Engineering
-                             Technology ESET, and mechanical technology (MechTech) work with researchers as they
-                             investigate possible solutions, gaining valuable experience in data management and acquiring
-                                     advanced skill sets.
+                    AI and ML are broad topics, so DICE has focused its work on three key areas:
+                    <ul className='HomeUl' style={{color:"black"}}>
+                        <li> asset management (AM)</li>
+                        <li>time sensitive networking (TSN)</li>
+                        <li>mesh networks (MN)</li>
+                    </ul>
+                    Techniques used to find patterns transcend sector-specific solutions – allowing, for
+                    example, for strategies learned on automotive assembly lines to be applied to ore processing or
+                    autonomous weeding. In each of these three areas, students in such fields as information
+                    technology (IT), mining, geographic information systems (GIS), Electronic Systems Engineering
+                    Technology ESET, and mechanical technology (MechTech) work with researchers as they
+                    investigate possible solutions, gaining valuable experience in data management and acquiring
+                    advanced skill sets.
 
 
-            </p>
-                </div>
+                </p>
+            </div>
+            <Services/>
+            <People/>
         </div>
     )
 };
