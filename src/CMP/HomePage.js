@@ -4,6 +4,7 @@ import Copyright from "./Footer";
 import HomeContent from "./HomeContent";
 import Services from "./Services";
 import People from "./People";
+import '../App.css';
 
 
 

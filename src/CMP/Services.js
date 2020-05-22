@@ -5,6 +5,7 @@ import Copyright from "./Footer";
 import ServiceList from "./ServicesList";
 import Header from "./Header";
 
+
 class Services extends Component
 {
     constructor()
@@ -116,10 +117,9 @@ class Services extends Component
         return (
             <div className={"mainPag"} id="Services">
 
-                <div  >
-                    <h1 style={{color:"rebeccapurple"}}>Services</h1>
+                    <h1 style={{color:"rebeccapurple",alignment:'center'}}>Services</h1>
                     {valueHol}
-                </div>
+
 
             </div>)
     }
