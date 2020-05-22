@@ -8,28 +8,23 @@ import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import SignUp from "./CMP/SignUp";
 import ForgetPassword from "./CMP/ForgetPassword";
 import Services from "./CMP/Services";
+import HomePage from "./CMP/HomePage";
 
 function App() {
   return (
-      <div>
-          <Services/>
-          <Header/>
-          <People/>
+      <Router>
+          <div id="App">
+              <Switch>
+                  <Route path="/" exact component={HomePage}/>
+                  <Route path="/Login" component={SignIn}/>
+                  <Route path="/SignUp" component={SignUp}/>
+                  <Route path="/Forget" component={ForgetPassword}/>
+              </Switch>
+          </div>
+      </Router>
 
-
-      </div>
 
   );
 }
-
-const home = () => (
-    <div id="Home" style={{height:"100%"}}>
-<Header/>
-        <div style={{position:"relative",bottom:"-630px"}}>
-
-        </div>
-        <Copyright/>
-    </div>
-);
 
 export default App;

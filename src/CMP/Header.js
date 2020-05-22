@@ -1,7 +1,8 @@
 
 import React from "react";
 import logo from '../img/Logo.jpeg'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link , animateScroll as scroll } from "react-scroll";
+
 
 export default function Header() {
 
@@ -11,7 +12,7 @@ export default function Header() {
             width: '100%',
             left:'0px',
             top:'0',
-            height: '100px',
+            height:'100px',
             zIndex:'9999'
             }}>
         <div style={{left:'10px',position: 'absolute'}}>
@@ -21,9 +22,10 @@ export default function Header() {
             <div style={{right:'-700px',bottom: '-50px',position: 'relative'}}>
                 <nav>
                 <ul className="StyleUl">
+                    <Link to="/">
                     <Link
                         activeClass="active"
-                        to="Home"
+                        to="About"
                         spy={true}
                         smooth={true}
                         offset={-70}
@@ -33,7 +35,8 @@ export default function Header() {
                             About
                         </li>
                     </Link>
-                    <li>
+                    </Link>
+                        <li>
                         |
                     </li>
                     <Link
@@ -66,7 +69,8 @@ export default function Header() {
                     <li>
                         |
                     </li>
-                    <Link to="/Login">
+                    <Link to="/Login"
+                          activeClass="active">
                         <li>
                             Projects
                         </li>
