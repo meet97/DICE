@@ -26,7 +26,7 @@ nav{
   list-style: none;
 }
 
-li{
+.StyleUl li{
   display: block;
   color: white;
   float: right;
@@ -34,7 +34,11 @@ li{
   padding: 14px 16px;
   text-decoration: none;
 }
+.HomeUl li{
+  display: list-item;
+  color:black;
 
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

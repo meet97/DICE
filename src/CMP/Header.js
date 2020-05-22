@@ -19,7 +19,7 @@ export default function Header() {
             <div style={{right:'-750px',bottom: '-50px',position: 'relative'}}>
                 <nav>
                 <ul className="StyleUl">
-                    <Link to="/Login">
+                    <Link to="/HomePage">
                         <li>
                             About
                         </li>
