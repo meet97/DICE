@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "./Header";
-import Copyright from "./Footer";
 import HomeContent from "./HomeContent";
+import '../App.css';
 import Services from "./Services";
 import People from "./People";
-import '../App.css';
+import Copyright from "./Footer";
 
 
 
@@ -16,10 +16,19 @@ class HomePage extends React.Component {
         return (
 
             <div id="Home">
+                <div className="homepage">
                 <HomeContent/>
-
+                </div>
+                <div className="mainPage">
+                <Services/>
+                </div>
+                <div className="mainPag">
+                <People/>
+                </div>
                 <Header/>
-
+                <div id="Foot">
+                <Copyright/>
+                </div>
             </div>
 
         )

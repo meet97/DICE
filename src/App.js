@@ -1,13 +1,9 @@
 import React from 'react';
 import './App.css';
 import SignIn from "./CMP/Login";
-import Header from "./CMP/Header";
-import Copyright from './CMP/Footer';
-import People from './CMP/People';
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import SignUp from "./CMP/SignUp";
 import ForgetPassword from "./CMP/ForgetPassword";
-import Services from "./CMP/Services";
 import HomePage from "./CMP/HomePage";
 
 function App() {

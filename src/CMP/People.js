@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import './Demo.css';
 import 'tachyons';
-import Copyright from "./Footer";
-import Header from "./Header";
 import PeopleList from "./PeopleList";
 
 class People extends Component
@@ -84,9 +82,9 @@ class People extends Component
             return <PeopleList key={i} id={peopleList[i].id} name={peopleList[i].name} work={peopleList[i].work}/>
         });
         return(
-            <div className={"mainPag"} id="People" >
+            <div id="People" >
                 <div>
-                    <h1 style={{textAlign:"Center"}}>Our Team</h1>
+                    <h1 style={{textAlign:"Center", color:"rebeccapurple", paddingTop:"75px", paddingBottom:'5px'}}>Our Team</h1>
                     {peopleHolher}
                 </div>
 

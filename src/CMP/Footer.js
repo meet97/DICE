@@ -3,10 +3,7 @@ import Typography from '@material-ui/core/Typography';
 
 export default function Copyright() {
     return (
-        <div style={{position:'static',
-            bottom:'50px',
-            width: '100%',
-            height: '10%'}}>
+        <div id='Contact'>
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
                 Group 2

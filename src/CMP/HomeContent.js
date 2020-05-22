@@ -6,7 +6,7 @@ import home2 from "../img/home2.jpg";
 import home3 from "../img/home3.jpg";
 import asset from "../img/asset.jpg";
 import tsn from "../img/tsn.png";
- import { Slide } from 'react-slideshow-image';
+import { Slide } from 'react-slideshow-image';
 import logo from "../img/Logo.jpeg";
 
 import './Demo.css';
@@ -32,30 +32,30 @@ const properties = {
 const homeContent = () => {
     return(
 
-        <div className="HomePage" id="About">
+        <div className="HomePage" style={{height:"100%"}}>
 
             <div className="slide-container">
 
-            <Slide {...properties}>
-                <div className="each-slide">
-                    <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
+                <Slide {...properties}>
+                    <div className="each-slide">
+                        <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
 
+                        </div>
                     </div>
-                </div>
-                <div className="each-slide">
-                    <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
+                    <div className="each-slide">
+                        <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
 
+                        </div>
                     </div>
-                </div>
-                <div className="each-slide">
-                    <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
+                    <div className="each-slide">
+                        <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
 
+                        </div>
                     </div>
-                </div>
-            </Slide>
+                </Slide>
             </div>
-            <div className='heading'>
-                <h1> Digital Integration Centre of Excellence </h1>
+            <div className='heading' id="About">
+                <h1 style={{color:"rebeccapurple",paddingTop:"50px",textAlign:"center", paddingBottom:"50px"}}> Digital Integration Centre of Excellence </h1>
             </div>
             <div className='content' style={{position:'relative',
                 float:'left',
@@ -72,7 +72,7 @@ const homeContent = () => {
                     insights to our industry partners.
 
                     AI and ML are broad topics, so DICE has focused its work on three key areas:
-                    <div className='keyarea'>
+                    <div className='keyarea' style={{paddingTop:'50px'}}>
                         <div className='key'>
                             <img src={asset} alt="Logo" className='image'/>
                             <div className="middle">
@@ -127,9 +127,8 @@ const homeContent = () => {
 
 
                 </p>
+
             </div>
-            <Services/>
-            <People/>
         </div>
     )
 };

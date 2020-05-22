@@ -27,9 +27,9 @@ export default function Header() {
                         activeClass="active"
                         to="About"
                         spy={true}
-                        smooth={true}
+                        smooth={'easeInOutQuint'}
                         offset={-70}
-                        duration= {500}
+                        duration= {1500}
                     >
                         <li>
                             About
@@ -43,9 +43,9 @@ export default function Header() {
                         activeClass="active"
                         to="Services"
                         spy={true}
-                        smooth={true}
+                        smooth={'easeInOutQuint'}
                         offset={-70}
-                        duration= {500}
+                        duration= {1500}
                     >
                         <li>
                             Services
@@ -58,9 +58,9 @@ export default function Header() {
                         activeClass="active"
                         to="People"
                         spy={true}
-                        smooth={true}
+                        smooth={'easeInOutQuint'}
                         offset={-70}
-                        duration= {500}
+                        duration= {1500}
                     >
                         <li>
                             People
@@ -78,9 +78,19 @@ export default function Header() {
                     <li>
                         |
                     </li>
-                    <li>
-                        Contact
-                    </li>
+                    <Link
+                        activeClass="selected"
+                        to="Contact"
+                        spy={true}
+                        smooth={'easeInOutQuint'}
+                        offset={70}
+                        duration= {1500}
+
+                    >
+                        <li>
+                            Contact
+                        </li>
+                    </Link>
                     <li>
                          |
                     </li>

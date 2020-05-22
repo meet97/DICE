@@ -1,9 +1,7 @@
 import React, {Component} from "react";
 import './Demo.css';
 import 'tachyons';
-import Copyright from "./Footer";
 import ServiceList from "./ServicesList";
-import Header from "./Header";
 
 
 class Services extends Component
@@ -115,11 +113,10 @@ class Services extends Component
 
 
         return (
-            <div className={"mainPag"} id="Services">
+            <div id="Services">
 
-                    <h1 style={{color:"rebeccapurple",alignment:'center'}}>Services</h1>
+                    <h1 style={{color:"rebeccapurple",paddingTop:"70px",textAlign:"center", paddingBottom:"80px"}}>Services</h1>
                     {valueHol}
-
 
             </div>)
     }

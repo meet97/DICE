@@ -26,9 +26,6 @@ nav{
   display:block;
 }
 
-.mainpag > h1{
-  alignment: center;
-}
 .content > p{
   position:relative;
   float:left;
