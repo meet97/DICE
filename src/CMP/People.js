@@ -84,13 +84,12 @@ class People extends Component
             return <PeopleList key={i} id={peopleList[i].id} name={peopleList[i].name} work={peopleList[i].work}/>
         });
         return(
-            <div className={"mainPage"}>
-                <Header/>
+            <div className={"mainPag"} id="People" >
                 <div>
-                    <h1>Our Team</h1>
+                    <h1 style={{textAlign:"Center"}}>Our Team</h1>
                     {peopleHolher}
                 </div>
-                <Copyright/>
+
             </div>
         )
     }

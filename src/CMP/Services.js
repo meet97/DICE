@@ -100,25 +100,29 @@ class Services extends Component
                 id:16,
                 name:"Cyber Security",
 
+            },
+            {
+                id:17,
+                name:"Virtual, Mixed and Augmented Reality",
+
             }
         ]
 
-        const valueHolher = arrayList.map( (temp, i) => {
+        const valueHol = arrayList.map( (temp, i) => {
             return <ServiceList id={arrayList[i].id} name={arrayList[i].name}/>
         })
 
 
         return (
-            <div className={"mainPage"}>
-                <Header/>
+            <div className={"mainPag"} id="Services">
+
                 <div  >
-                    <h1>Services</h1>
-                    {valueHolher}
+                    <h1 style={{color:"rebeccapurple"}}>Services</h1>
+                    {valueHol}
                 </div>
-                <Copyright/>
+
             </div>)
     }
 }
-
 
 export default Services;

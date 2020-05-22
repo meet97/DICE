@@ -1,7 +1,7 @@
 
 import React from "react";
-import logo from '../img/logo.png'
-import {Link} from 'react-router-dom';
+import logo from '../img/Logo.jpeg'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 export default function Header() {
 
@@ -11,7 +11,8 @@ export default function Header() {
             width: '100%',
             left:'0px',
             top:'0',
-            height: '100px'
+            height: '100px',
+            zIndex:'9999'
             }}>
         <div style={{left:'10px',position: 'absolute'}}>
             <Link to="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
@@ -20,7 +21,14 @@ export default function Header() {
             <div style={{right:'-700px',bottom: '-50px',position: 'relative'}}>
                 <nav>
                 <ul className="StyleUl">
-                    <Link to="/Login">
+                    <Link
+                        activeClass="active"
+                        to="Home"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+                    >
                         <li>
                             About
                         </li>
@@ -28,17 +36,31 @@ export default function Header() {
                     <li>
                         |
                     </li>
-                    <Link to="/People">
+                    <Link
+                        activeClass="active"
+                        to="Services"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+                    >
                         <li>
-                            People
+                            Services
                         </li>
                     </Link>
                     <li>
                         |
                     </li>
-                    <Link to="/Services">
+                    <Link
+                        activeClass="active"
+                        to="People"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration= {500}
+                    >
                         <li>
-                            Services
+                            People
                         </li>
                     </Link>
                     <li>

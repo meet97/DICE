@@ -10,7 +10,7 @@
     height: 300px;
 }
 
-.mainPage {
+.mainPag {
     width: 100%;
     height: 100%;
     margin: auto;
@@ -18,7 +18,7 @@
     top :100px;
 }
 
-.mainPage h1{
+.mainPag h1{
     margin: 0;
     padding: 40px 0;
     text-align: center;

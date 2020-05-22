@@ -11,24 +11,23 @@ import Services from "./CMP/Services";
 
 function App() {
   return (
-      <Router>
-    <div id="App">
-        <Switch>
-        <Route path="/" exact component={home}/>
-        <Route path="/People" component={People}/>
-        <Route path="/Login" component={SignIn}/>
-        <Route path="/SignUp" component={SignUp}/>
-        <Route path="/Forget" component={ForgetPassword}/>
-        <Route path="/Services" component={Services}/>
-        </Switch>
-    </div>
-      </Router>
+      <div>
+          <Services/>
+          <Header/>
+          <People/>
+
+
+      </div>
+
   );
 }
 
 const home = () => (
-    <div id="App">
-        <Header/>
+    <div id="Home" style={{height:"100%"}}>
+<Header/>
+        <div style={{position:"relative",bottom:"-630px"}}>
+
+        </div>
         <Copyright/>
     </div>
 );
