@@ -44,6 +44,6 @@ export default function LoginHeader() {
                 </nav>
             </div>
         </div>
-    )
+    );
 }
 
