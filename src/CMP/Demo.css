@@ -72,7 +72,10 @@ li:nth-child(1):hover{
     background-color: mediumpurple;
 }
 
-
+li a{
+    color: white;
+    text-decoration: none;
+}
 
 .HomeUl li{
     display: list-item;

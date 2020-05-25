@@ -13,6 +13,7 @@ import Container from '@material-ui/core/Container';
 import Copyright from "./Footer";
 import Header from "./Header";
 import {Link} from 'react-router-dom';
+import LoginHeader from "./LoginHeader";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -35,12 +36,14 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
+
 export default function SignIn() {
     const classes = useStyles();
 
     return (
         <div>
-            <Header/>
+            <LoginHeader/>
             <Container component="main" maxWidth="xs">
                 <CssBaseline/>
                 <div className={classes.paper} style={{top: '50px', position: 'relative', height:"100%"}}>

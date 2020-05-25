@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Copyright from "./Footer";
 import Header from "./Header";
+import LoginHeader from "./LoginHeader";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +41,7 @@ export default function SignUp() {
 
     return (
 <div>
-    <Header/>
+    <LoginHeader/>
         <Container component="main" maxWidth="xs">
             <CssBaseline/>
 

@@ -84,7 +84,6 @@ export default function Header() {
                         smooth={'easeInOutQuint'}
                         offset={70}
                         duration= {1500}
-
                     >
                         <li>
                             Contact
@@ -93,19 +92,20 @@ export default function Header() {
                     <li>
                          |
                     </li>
-                    <links to="/Login">
+                    {/*<Link to="/Login">*/}
+
                         <li>
-                            Login
+                            <a href={"/Login"}> Login</a>
                         </li>
-                    </links>
+                    {/*</Link>*/}
                     <li>
                         |
                     </li>
-                    <links to="/SignUp">
+                    {/*<Link to="/SignUp">*/}
                         <li>
-                            Register
+                            <a href={"/SignUp"}> Register</a>
                         </li>
-                    </links>
+                    {/*</Link>*/}
                 </ul>
                 </nav>
             </div>

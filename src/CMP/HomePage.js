@@ -16,6 +16,7 @@ class HomePage extends React.Component {
         return (
 
             <div id="Home">
+                <Header/>
                 <div className="homepage">
                 <HomeContent/>
                 </div>
@@ -25,7 +26,7 @@ class HomePage extends React.Component {
                 <div className="mainPag">
                 <People/>
                 </div>
-                <Header/>
+
                 <div id="Foot">
                 <Copyright/>
                 </div>
