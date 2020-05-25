@@ -69,8 +69,10 @@
 }
 
 li:nth-child(1):hover{
-    background-color: black;
+    background-color: mediumpurple;
 }
+
+
 
 .HomeUl li{
     display: list-item;

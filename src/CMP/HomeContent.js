@@ -74,19 +74,19 @@ const homeContent = () => {
                     AI and ML are broad topics, so DICE has focused its work on three key areas:
                     <div className='keyarea' style={{paddingTop:'50px'}}>
                         <div className='key'>
-                            <img src={asset} alt="Logo" className='image'/>
+                            <img src={asset} alt="Logo" className='image' style={{height:'200px'}}/>
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={tsn} alt="Logo" className='image'/>
+                            <img src={tsn} alt="Logo" className='image' style={{height:'200px'}}/>
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={asset} alt={"asset Pic"} className='image'/>
+                            <img src={asset} alt={"asset Pic"} className='image' style={{height:'200px'}}/>
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>

@@ -2,6 +2,7 @@
 import React from "react";
 import logo from '../img/Logo.jpeg'
 import { Link , animateScroll as scroll } from "react-scroll";
+import {Link as links} from 'react-router-dom';
 
 
 export default function Header() {
@@ -16,13 +17,12 @@ export default function Header() {
             zIndex:'9999'
             }}>
         <div style={{left:'10px',position: 'absolute'}}>
-            <Link to="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
-            </Link>
+            <links to="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
+            </links>
         </div>
             <div style={{right:'-700px',bottom: '-50px',position: 'relative'}}>
                 <nav>
                 <ul className="StyleUl">
-                    <Link to="/">
                     <Link
                         activeClass="active"
                         to="About"
@@ -35,8 +35,7 @@ export default function Header() {
                             About
                         </li>
                     </Link>
-                    </Link>
-                        <li>
+                    <li>
                         |
                     </li>
                     <Link
@@ -94,19 +93,19 @@ export default function Header() {
                     <li>
                          |
                     </li>
-                    <Link to="/Login">
+                    <links to="/Login">
                         <li>
                             Login
                         </li>
-                    </Link>
+                    </links>
                     <li>
                         |
                     </li>
-                    <Link to="/SignUp">
+                    <links to="/SignUp">
                         <li>
                             Register
                         </li>
-                    </Link>
+                    </links>
                 </ul>
                 </nav>
             </div>
