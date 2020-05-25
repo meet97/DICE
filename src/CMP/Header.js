@@ -1,7 +1,7 @@
 
 import React from "react";
 import logo from '../img/Logo.jpeg'
-import { Link , animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import {Link as links} from 'react-router-dom';
 
 
@@ -30,6 +30,7 @@ export default function Header() {
                         smooth={'easeInOutQuint'}
                         offset={-70}
                         duration= {1500}
+                        scrollsnap={true}
                     >
                         <li>
                             About
