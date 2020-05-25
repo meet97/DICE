@@ -5,6 +5,7 @@ import '../App.css';
 import Services from "./Services";
 import People from "./People";
 import Copyright from "./Footer";
+import Projects from "./Projects";
 
 
 
@@ -24,6 +25,9 @@ class HomePage extends React.Component {
                 </div>
                 <div className="mainPag" style={{float: "right"}}>
                 <People/>
+                </div>
+                <div className="Proj" style={{float: "right"}}>
+                    <Projects/>
                 </div>
                 <Header/>
                 <div id="Foot" style={{float: "right"}}>
