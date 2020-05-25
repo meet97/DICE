@@ -9,7 +9,7 @@ import HomePage from "./CMP/HomePage";
 function App() {
   return (
       <Router>
-          <div id="App">
+          <div id="App" >
               <Switch>
                   <Route path="/" exact component={HomePage}/>
                   <Route path="/Login" component={SignIn}/>

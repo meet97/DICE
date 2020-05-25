@@ -14,13 +14,14 @@ export default function Header() {
             left:'0px',
             top:'0',
             height:'100px',
-            zIndex:'9999'
+            zIndex:'9999',
+            minWidth:'1220px'
             }}>
-        <div style={{left:'10px',position: 'absolute'}}>
+        <div style={{left:'10px',position: 'absolute', minWidth:'100%'}}>
             <links to="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
             </links>
         </div>
-            <div style={{right:'-700px',bottom: '-50px',position: 'relative'}}>
+            <div style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
                 <nav>
                 <ul className="StyleUl">
                     <Link
