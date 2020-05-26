@@ -64,7 +64,7 @@ export default function Header() {
                         duration= {1500}
                     >
                         <li>
-                            People
+                            Team
                         </li>
                     </Link>
                     <li>
