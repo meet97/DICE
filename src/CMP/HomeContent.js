@@ -1,13 +1,11 @@
 import React from 'react';
-import Services from "./Services";
-import People from "./People";
 import home1 from "../img/home1.png";
 import home2 from "../img/home2.jpg";
 import home3 from "../img/home3.jpg";
 import asset from "../img/asset.jpg";
 import tsn from "../img/tsn.png";
 import { Slide } from 'react-slideshow-image';
-import logo from "../img/Logo.jpeg";
+
 
 import './Demo.css';
 
@@ -32,7 +30,7 @@ const properties = {
 const homeContent = () => {
     return(
 
-        <div className="HomePage" style={{height:"100%"}}>
+        <div className="HomePage" style={{height:"100%",minWidth:'100%'}}>
 
             <div className="slide-container">
 
@@ -72,7 +70,7 @@ const homeContent = () => {
                     insights to our industry partners.
 
                     AI and ML are broad topics, so DICE has focused its work on three key areas:
-                    <div className='keyarea' style={{paddingTop:'50px'}}>
+                    <div className='keyarea' style={{paddingTop:'50px', minWidth:'100%'}}>
                         <div className='key'>
                             <img src={asset} alt="Logo" className='image' style={{height:'200px'}}/>
 
