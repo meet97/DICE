@@ -30,7 +30,7 @@ const properties = {
 const homeContent = () => {
     return(
 
-        <div className="HomePage" style={{height:"100%",minWidth:'100%'}}>
+        <div className="HomePage" style={{height:"100%",minWidth:'1200px'}}>
 
             <div className="slide-container">
 
@@ -73,23 +73,19 @@ const homeContent = () => {
                     <div className='keyarea' style={{paddingTop:'50px', minWidth:'100%'}}>
                         <div className='key'>
                             <img src={asset} alt="Logo" className='image' style={{height:'200px'}}/>
-
                             <div className="middle">
-                                <h3> Asset Management </h3>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
                             <img src={tsn} alt="Logo" className='image' style={{height:'200px'}}/>
                             <div className="middle">
-                                <h3> Time Sensitive Networking </h3>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
                             <img src={asset} alt={"asset Pic"} className='image' style={{height:'200px'}}/>
                             <div className="middle">
-                                <h3> Mesh Networking </h3>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
