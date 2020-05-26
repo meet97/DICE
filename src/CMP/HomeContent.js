@@ -62,7 +62,6 @@ const homeContent = () => {
                 paddingLeft: '12%',
                 paddingRight:'12%',
                 fontSize:'20px',
-                minWidth: '100%',
                 display:'block'}}>
                 <p>
 
@@ -73,19 +72,19 @@ const homeContent = () => {
                     AI and ML are broad topics, so DICE has focused its work on three key areas:
                     <div className='keyarea' style={{paddingTop:'50px', minWidth:'100%'}}>
                         <div className='key'>
-                            <img src={asset} alt="Logo" className='image' style={{height:'200px', minWidth:'100%'}}/>
+                            <img src={asset} alt="Logo" className='image' style={{height:'200px'}}/>
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={tsn} alt="Logo" className='image' style={{height:'200px', minWidth:'100%'}}/>
+                            <img src={tsn} alt="Logo" className='image' style={{height:'200px'}}/>
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={asset} alt={"asset Pic"} className='image' style={{height:'200px', minWidth:'100%'}}/>
+                            <img src={asset} alt={"asset Pic"} className='image' style={{height:'200px'}}/>
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>

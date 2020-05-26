@@ -69,15 +69,14 @@ nav{
   position: relative;
   float: left;
   width: 33%;
-  margin: 1px;
-  padding-top: 10px;
   height: 200px;
+  background: #3e64ff;
 }
 .image {
   opacity: 1;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   transition: .5s ease;
   backface-visibility: hidden;
 }
@@ -92,13 +91,16 @@ nav{
   text-align: center;
 }
 
+
 .key:hover .image {
-  background-color: cornflowerblue;
-  opacity: 0.3;
+
+  opacity: 0.1;
+  background: #3e64ff;
+  z-index: -1;
 
 }
-
 .key:hover .middle {
+
   opacity: 1;
 }
 .text {
