@@ -75,19 +75,23 @@ const homeContent = () => {
                     <div className='keyarea' style={{paddingTop:'50px'}}>
                         <div className='key'>
                             <img src={asset} alt="Logo" className='image' style={{height:'200px'}}/>
+
                             <div className="middle">
+                                <h3> Asset Management </h3>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
                             <img src={tsn} alt="Logo" className='image' style={{height:'200px'}}/>
                             <div className="middle">
+                                <h3> Time Sensitive Networking </h3>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
                             <img src={asset} alt={"asset Pic"} className='image' style={{height:'200px'}}/>
                             <div className="middle">
+                                <h3> Mesh Networking </h3>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
