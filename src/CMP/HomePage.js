@@ -8,6 +8,7 @@ import Copyright from "./Footer";
 
 
 
+
 class HomePage extends React.Component {
 
 
@@ -26,7 +27,6 @@ class HomePage extends React.Component {
                 <div className="mainPag">
                 <People/>
                 </div>
-
                 <div id="Foot">
                 <Copyright/>
                 </div>

@@ -76,7 +76,24 @@ li a{
     color: white;
     text-decoration: none;
 }
+.socialMedia
+{
 
+}
+#icons{
+    border-spacing: 0 10px;
+    margin: 10px;
+    width: 10%;
+}
+td{
+    width: 30%;
+
+    text-align: center;
+}
+td a{
+    color: white;
+    text-decoration: none;
+}
 .HomeUl li{
     display: list-item;
     color:black;
