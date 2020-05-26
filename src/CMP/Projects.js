@@ -78,7 +78,7 @@ class Projects extends Component
 
 
         return (
-            <div id="Project" style={{minWidth:'1220px'}}>
+            <div id="Project" style={{minWidth:'1200px'}}>
 
                 <h1 style={{color:"rebeccapurple",paddingTop:"70px",textAlign:"center", paddingBottom:"80px"}}>Projects</h1>
                 {valueHol}

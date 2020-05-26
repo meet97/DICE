@@ -5,17 +5,17 @@ import {SocialMediaIconsReact} from 'social-media-icons-react';
 export default function Copyright() {
     return (
         <div id='Contact' >
-            <table style={{width:"100%"}}>
-                <tr>
+            <table style={{width:'1200px'}}>
+                <tr style={{width:'55%'}}>
                     <td><h3>Office</h3></td>
                     <td><h3>Useful Links</h3></td>
-                    <td></td>
                 </tr>
-                <tr>
+                <tr style={{width:'33%'}}>
                     <td>
                         Room 304.10<br/>
-                        Saskatchewan Polytechnic, Saskatoon Campus, Idylwyld Dr.<br/>
+                        Saskatchewan Polytechnic<br/> Saskatoon Campus, Idylwyld Dr.<br/>
                         <a href={"tel:306-659-4107"}>Call us (306-659-4107)</a>
+
                     </td>
                     <td>
                         <a href={"https://saskpolytech.ca/about/applied-research-and-innovation/dice/administration.aspx"}> Administration </a> <br/>

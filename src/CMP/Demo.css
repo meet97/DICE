@@ -25,9 +25,8 @@
 
 .Proj {
     width: 100%;
-    Position:absolute;
-    top :4600px;
-    margin-left: 50px;
+    Position:relative;
+    top :3300px;
     min-width: 100%;
 }
 
@@ -39,7 +38,8 @@
     position: absolute;
     top: 5700px;
     width: 100%;
-    height:25%;
+    height:32%;
+    min-width: 1220px;
     background-color: grey;
 }
 
@@ -59,7 +59,6 @@ body{
 .content > p{
     position:relative;
     float:left;
-    font-family:Arial;
     alignment:center;
     paddingLeft: 12%;
     paddingRight:12%;
@@ -93,6 +92,10 @@ body{
 
 li:nth-child(1):hover{
     background-color: mediumpurple;
+}
+
+#Foooter{
+    padding: 0;
 }
 
 

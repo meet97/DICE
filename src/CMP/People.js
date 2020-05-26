@@ -82,7 +82,7 @@ class People extends Component
             return <PeopleList key={i} id={peopleList[i].id} name={peopleList[i].name} work={peopleList[i].work}/>
         });
         return(
-            <div id="People" style={{minWidth:'1220px'}}>
+            <div id="People" style={{minWidth:'1200px'}}>
                 <div>
                     <h1 style={{textAlign:"Center", color:"rebeccapurple", paddingTop:"75px", paddingBottom:'5px'}}>Our Team</h1>
                     {peopleHolher}
