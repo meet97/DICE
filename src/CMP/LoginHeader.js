@@ -1,8 +1,7 @@
 
 import React from "react";
 import logo from '../img/Logo.jpeg'
-import { Link , animateScroll as scroll } from "react-scroll";
-import {Link as links} from 'react-router-dom';
+
 
 
 export default function LoginHeader() {
@@ -20,7 +19,7 @@ export default function LoginHeader() {
                 <a href="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
                 </a>
             </div>
-            <div style={{right:'-1100px',bottom: '-50px',position: 'relative'}}>
+            <div style={{right:'-950px',bottom: '-50px',position: 'relative'}}>
                 <nav>
                     <ul className="StyleUl">
 
