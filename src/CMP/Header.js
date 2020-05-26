@@ -70,8 +70,15 @@ export default function Header() {
                     <li>
                         |
                     </li>
-                    <Link to="/Login"
-                          activeClass="active">
+                    <Link
+                        activeClass="active"
+                        to="Project"
+                        spy={true}
+                        smooth={'easeInOutQuint'}
+                        offset={-70}
+                        duration= {1500}
+                        scrollsnap={true}
+                    >
                         <li>
                             Projects
                         </li>
