@@ -86,6 +86,11 @@ body{
 
 }
 
+.StyleUl li a{
+    color: white;
+    text-decoration: none;
+}
+
 li:nth-child(1):hover{
     background-color: mediumpurple;
 }
