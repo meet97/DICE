@@ -15,19 +15,21 @@ class HomePage extends React.Component {
     {
         return (
 
-            <div id="Home">
-                <Header/>
+            <div id="Home" >
                 <div className="homepage">
                 <HomeContent/>
                 </div>
-                <div className="mainPage">
+                <div className="mainPage" style={{float: "right"}}>
                 <Services/>
                 </div>
-                <div className="mainPag">
+                <div className="mainPag" style={{float: "right"}}>
                 <People/>
                 </div>
-
-                <div id="Foot">
+                <div className="Proj" style={{float: "right"}}>
+                    <Projects/>
+                </div>
+                <Header/>
+                <div id="Foot" style={{float: "right"}}>
                 <Copyright/>
                 </div>
             </div>
