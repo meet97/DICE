@@ -5,6 +5,7 @@ import '../App.css';
 import Services from "./Services";
 import People from "./People";
 import Copyright from "./Footer";
+import Projects from "./Projects";
 
 
 

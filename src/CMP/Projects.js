@@ -25,7 +25,7 @@ class Projects extends Component
             {
                 id:1,
                 name:"Augmented Reality in a Large Agricultural Expo",
-                detail: "Prototype platform using augmented reality to help facilitate knowledge exchange in a large outdoor agricultural expo",
+                detail: "Prototype platform using augmented reality to help facilitate knowledge exchange",
 
             },
             {
@@ -37,7 +37,7 @@ class Projects extends Component
             {
                 id:3,
                 name:"Open Source Attack Graph Platform",
-                detail: "An open source tool that performs automated penetration testing along with suggested solutions",
+                detail: "An open source tool that performs automated penetration testing",
 
             },
             {
@@ -49,7 +49,7 @@ class Projects extends Component
             {
                 id:5,
                 name:"Quality Control Improvements for Automotive Manufacturing",
-                detail: "Design and testing of machine learning technologies on assembly line data to decrease incidence of faulty parts",
+                detail: "Design and testing of machine learning technologies on assembly line",
 
             },
             {
