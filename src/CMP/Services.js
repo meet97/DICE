@@ -113,7 +113,7 @@ class Services extends Component
 
 
         return (
-            <div id="Services" style={{minWidth:'1200px'}}>
+            <div id="Services">
 
                     <h1 style={{color:"rebeccapurple",paddingTop:"70px",textAlign:"center", paddingBottom:"80px"}}>Services</h1>
                     {valueHol}
