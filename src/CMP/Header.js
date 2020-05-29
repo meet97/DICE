@@ -15,10 +15,9 @@ export default function Header() {
             top:'0',
             height:'100px',
             zIndex:'9999',
-            minWidth:'1200px'
             }}>
         <div style={{left:'10px',position: 'absolute', minWidth:'100%'}}>
-            <links to="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
+            <links to="/"><img id='logo' src={logo} alt={"Hello"} height={'100px'}/>
             </links>
         </div>
             <div style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>

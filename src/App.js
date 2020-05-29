@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
-import SignIn from "./CMP/Login";
+import LoginForm from "./CMP/Login";
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import SignUp from "./CMP/SignUp";
 import ForgetPassword from "./CMP/ForgetPassword";
 import HomePage from "./CMP/HomePage";
+import AdminHome from "./CMP/AdminHome";
+
 
 function App() {
   return (
@@ -12,9 +14,10 @@ function App() {
           <div id="App">
               <Switch>
                   <Route path="/" exact component={HomePage}/>
-                  <Route path="/Login" component={SignIn}/>
+                  <Route path="/Login" component={LoginForm}/>
                   <Route path="/SignUp" component={SignUp}/>
                   <Route path="/Forget" component={ForgetPassword}/>
+                  <Route path="/Admin" component={AdminHome}/>
               </Switch>
           </div>
       </Router>

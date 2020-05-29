@@ -5,7 +5,7 @@ import {SocialMediaIconsReact} from 'social-media-icons-react';
 export default function Copyright() {
     return (
         <div id='Contact' >
-            <table style={{width:'1200px'}}>
+            <table style={{width:'100%'}}>
                 <tr style={{width:'55%'}}>
                     <td><h3>Office</h3></td>
                     <td><h3>Useful Links</h3></td>

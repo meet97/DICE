@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,8 +12,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Copyright from "./Footer";
 import Header from "./Header";
-import {Link} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 import LoginHeader from "./LoginHeader";
+import SignUp from "./SignUp";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,6 +42,23 @@ const useStyles = makeStyles((theme) => ({
 export default function SignIn() {
     const classes = useStyles();
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    function validateForm() {
+        return email.length > 0 && password.length > 0;
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log("Submitting");
+        console.log(email);
+        console.log(password);
+        if(password==="Harman")
+        {
+            window.location = "/Admin";
+        }
+    }
     return (
         <div>
             <LoginHeader/>
@@ -53,7 +71,7 @@ export default function SignIn() {
                     <Typography component="h1" variant="h5">
                         Sign in
                     </Typography>
-                    <form className={classes.form} >
+                    <form className={classes.form} onSubmit= {handleSubmit} >
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -65,6 +83,7 @@ export default function SignIn() {
                             name="email"
                             autoComplete="email"
                             autoFocus
+                            onChange={e=>setEmail(e.target.value)}
 
                         />
                         <TextField
@@ -77,6 +96,7 @@ export default function SignIn() {
                             label="Password"
                             type="password"
                             id="password"
+                            onChange={e => setPassword(e.target.value)}
                             autoComplete="current-password"
                         />
                         <FormControlLabel
@@ -88,7 +108,7 @@ export default function SignIn() {
                             fullWidth
                             variant="contained"
                             color="primary"
-
+                            disabled={!validateForm()}
                             className={classes.submit}
                         >
                             Sign In

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -38,7 +38,25 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SignUp() {
     const classes = useStyles();
+    const [email, setEmail] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
 
+    function validateForm() {
+        return email.length > 0 && firstName.length >0 && lastName.length >0
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log("Submitting");
+        console.log(email);
+        console.log(firstName);
+        console.log(lastName);
+        if(firstName==="Harman")
+        {
+            window.location = "/SignUp";
+        }
+    }
     return (
 <div>
     <LoginHeader/>
@@ -64,6 +82,7 @@ export default function SignUp() {
                                 id="firstName"
                                 label="First Name"
                                 autoFocus
+                                onChange={e=>setFirstName(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -75,6 +94,7 @@ export default function SignUp() {
                                 label="Last Name"
                                 name="lastName"
                                 autoComplete="lname"
+                                onChange={e=>setLastName(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -86,18 +106,7 @@ export default function SignUp() {
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
-                            />
-                        </Grid>
-                        <Grid item xs={12}>
-                            <TextField
-                                variant="outlined"
-                                required
-                                fullWidth
-                                name="password"
-                                label="Password"
-                                type="password"
-                                id="password"
-                                autoComplete="current-password"
+                                onChange={e=>setEmail(e.target.value)}
                             />
                         </Grid>
                     </Grid>

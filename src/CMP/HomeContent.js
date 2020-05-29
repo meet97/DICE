@@ -30,7 +30,7 @@ const properties = {
 const homeContent = () => {
     return(
 
-        <div className="HomePage" style={{height:"100%",minWidth:'1200px'}}>
+        <div className="HomePage">
 
             <div className="slide-container">
 
@@ -52,9 +52,9 @@ const homeContent = () => {
                     </div>
                 </Slide>
             </div>
-            <div className='heading' id="About">
+
                 <h1 style={{color:"rebeccapurple",paddingTop:"50px",textAlign:"center", paddingBottom:"50px"}}> Digital Integration Centre of Excellence </h1>
-            </div>
+
             <div className='content' style={{position:'relative',
                 float:'left',
                 fontFamily:'Arial',
@@ -72,19 +72,19 @@ const homeContent = () => {
                     AI and ML are broad topics, so DICE has focused its work on three key areas:
                     <div className='keyarea' style={{paddingTop:'50px', minWidth:'100%'}}>
                         <div className='key'>
-                            <img src={asset} alt="Logo" className='image' style={{height:'200px'}}/>
+                            <img src={asset} alt="Logo" className='image'/>
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={tsn} alt="Logo" className='image' style={{height:'200px'}}/>
+                            <img src={tsn} alt="Logo" className='image' />
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={asset} alt={"asset Pic"} className='image' style={{height:'200px'}}/>
+                            <img src={asset} alt={"asset Pic"} className='image' />
                             <div className="middle">
                                 <div className="text">More Information</div>
                             </div>

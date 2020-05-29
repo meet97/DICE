@@ -11,22 +11,18 @@
 
 .mainPage {
     width: 100%;
-    Position:absolute;
-    top :1300px;
     min-width: 100%;
+    display: flex;
 }
 
 .mainPag {
     width: 100%;
-    Position:absolute;
-    top :2200px;
     min-width: 100%;
+    display: flex;
 }
 
 .Proj {
     width: 100%;
-    Position:relative;
-    top :3300px;
     min-width: 100%;
 }
 
@@ -35,8 +31,6 @@
 }
 
 #Foot{
-    position: absolute;
-    top: 5700px;
     width: 100%;
     height:32%;
     min-width: 1220px;
@@ -45,6 +39,92 @@
 
 body{
     min-width: 100%;
+}
+
+@media screen and (max-width: 900px){
+    #ProjectDiv{
+        Width:100%;
+    }
+    #ProjectName{
+        width: 100%;
+    }
+    #ProjectDesc{
+        width:100%;
+    }
+
+    .avatarLayout img{
+        width: 200px;
+        height: 100px;
+    }
+    #PeopleDiv{
+        Width:40%;
+        height:350px;
+    }
+
+    #ServiceDiv{
+        width:42%;
+        padding:20px;
+    }
+
+    .slide-container{
+        Width:100%;
+    }
+
+    .header{
+        width: 100%;
+    }
+
+    .header ul{
+        display: none;
+    }
+
+    #logo
+    {
+        width:35%;
+    }
+
+    .key{
+        height: 100px;
+        width: 10%;
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 901px){
+    #ProjectDiv{
+        height:250px;
+        width:32%;
+        padding:20px;
+    }
+
+    #ProjectName{
+        height:75px;
+        width:100%;
+        padding:20px;
+    }
+
+    #ProjectDesc{
+        height:175px;
+        width:100%;
+        padding:20px;
+    }
+
+    #ServiceDiv{
+        width:32%;
+        padding:20px;
+    }
+
+    #PeopleDiv{
+        Width:32%;
+    }
+
+    #logo{
+        width:15%;
+    }
+
 }
 
 .heading{
@@ -128,9 +208,8 @@ td a{
 .key{
     position: relative;
     float: left;
-    width: 33%;
+    width: 30%;
     margin: 1px;
-    height: 200px;
 }
 
 .middle > h3 {
