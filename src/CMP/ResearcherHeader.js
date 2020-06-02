@@ -5,14 +5,13 @@ import { Link } from "react-scroll";
 import {Link as links} from 'react-router-dom';
 
 
-export default function AdminHeader() {
+export default function ResearcherHeader() {
 
     return (
-        <div className="header" style={{position: 'static',
+        <div className="header" style={{
             backgroundColor: 'rebeccapurple',
             width: '100%',
-            left:'0px',
-            top:'0',
+            position:'sticky',
             zIndex:'9999',
         }}>
             <div style={{left:'10px',position: 'absolute', minWidth:'100%'}}>
@@ -21,7 +20,7 @@ export default function AdminHeader() {
             </div>
             <div id='nav' style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
                 <nav>
-                    <ul>
+                    <ul className="StyleUl">
                         <Link
                             activeClass="active"
                             to="Researcher"
@@ -32,7 +31,7 @@ export default function AdminHeader() {
                             scrollsnap={true}
                         >
                             <li>
-                                Researcher
+                                Profile
                             </li>
                         </Link>
                         <li>
@@ -89,7 +88,7 @@ export default function AdminHeader() {
                             scrollsnap={true}
                         >
                             <li>
-                                Researcher
+                                Profile
                             </li>
                         </Link>
                         <li>

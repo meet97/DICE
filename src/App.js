@@ -6,6 +6,7 @@ import SignUp from "./CMP/SignUp";
 import ForgetPassword from "./CMP/ForgetPassword";
 import HomePage from "./CMP/HomePage";
 import AdminHome from "./CMP/AdminHome";
+import ResearcherHome from "./CMP/ResearchHome";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                   <Route path="/SignUp" component={SignUp}/>
                   <Route path="/Forget" component={ForgetPassword}/>
                   <Route path="/Admin" component={AdminHome}/>
+                  <Route path="/Research" component={ResearcherHome}/>
               </Switch>
           </div>
       </Router>

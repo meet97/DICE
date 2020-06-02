@@ -3,7 +3,7 @@ import React from "react";
 const ProjectList = (props) => {
 
     return (
-        <div id='ProjectDiv' className="avatarLayout tc dib pa3 "  >
+        <div id='ProjectDiv' className="avatarLayout tc dib pa3 grow"  >
             <div id='ProjectName'>
             <h3>{props.name}</h3>
             </div>
