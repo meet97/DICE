@@ -21,7 +21,7 @@ export default function AdminHeader() {
             </div>
             <div id='nav' style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
                 <nav>
-                    <ul>
+                    <ul className='StyleUl'>
                         <Link
                             activeClass="active"
                             to="Researcher"
@@ -69,9 +69,15 @@ export default function AdminHeader() {
                             |
                         </li>
                         <li>
-                            <a href={"/SignUp"}> Logout</a>
+                            <a href={"/SignUp"}> Register</a>
                         </li>
                         {/*</Link>*/}
+                        <li>
+                            |
+                        </li>
+                        <li>
+                            <a href={"/"}> Logout</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -126,9 +132,15 @@ export default function AdminHeader() {
                             |
                         </li>
                         <li>
-                            <a href={"/SignUp"}> Logout</a>
+                            <a href={"/SignUp"}> Register</a>
                         </li>
                         {/*</Link>*/}
+                        <li>
+                            |
+                        </li>
+                        <li>
+                            <a href={"/"}>Logout</a>
+                        </li>
                     </ul>
                 </nav>
             </div>

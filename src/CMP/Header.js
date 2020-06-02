@@ -105,14 +105,6 @@ export default function Header() {
                             <a href={"/Login"}> Login</a>
                         </li>
                     {/*</Link>*/}
-                    <li>
-                        |
-                    </li>
-                    {/*<Link to="/SignUp">*/}
-                        <li>
-                            <a href={"/SignUp"}> Register</a>
-                        </li>
-                    {/*</Link>*/}
                 </ul>
                 </nav>
             </div>
