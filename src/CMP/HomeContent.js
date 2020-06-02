@@ -4,6 +4,7 @@ import home2 from "../img/home2.jpg";
 import home3 from "../img/home3.jpg";
 import asset from "../img/asset.jpg";
 import tsn from "../img/tsn.png";
+import mesh from "../img/mesh.jpeg";
 import { Slide } from 'react-slideshow-image';
 
 
@@ -22,9 +23,7 @@ const properties = {
     indicators: true,
     arrows: true,
     pauseOnHover: false,
-    onChange: (oldIndex, newIndex) => {
-        console.log(`slide transition from ${oldIndex} to ${newIndex}`);
-    }
+
 }
 
 const homeContent = () => {
@@ -87,7 +86,7 @@ const homeContent = () => {
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={asset} alt={"asset Pic"} className='image' style={{height:'200px'}}/>
+                            <img src={mesh} alt={"mesh Pic"} className='image' style={{height:'200px'}}/>
                             <div className="middle">
                                 <h3> Mesh Networking </h3>
                                 <div className="text">More Information</div>
@@ -119,6 +118,8 @@ const homeContent = () => {
                     {/*        network, and faculty/students from our veterinary technology program to help perform the*/}
                     {/*        validation testing with livestock.</li>*/}
                     {/*</ul>*/}
+
+                    {/*<div className="homecontent2">*/}
                     {/*Techniques used to find patterns transcend sector-specific solutions – allowing, for*/}
                     {/*example, for strategies learned on automotive assembly lines to be applied to ore processing or*/}
                     {/*autonomous weeding. In each of these three areas, students in such fields as information*/}
@@ -126,6 +127,7 @@ const homeContent = () => {
                     {/*Technology ESET, and mechanical technology (MechTech) work with researchers as they*/}
                     {/*investigate possible solutions, gaining valuable experience in data management and acquiring*/}
                     {/*advanced skill sets.*/}
+                    {/*</div>*/}
 
 
                 </p>

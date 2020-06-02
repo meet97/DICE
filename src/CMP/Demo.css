@@ -10,7 +10,7 @@
 }
 
 .mainPage {
-    width: 100%;
+
     Position:absolute;
     top :1300px;
     min-width: 100%;
@@ -40,9 +40,12 @@
     top: 5700px;
     width: 100%;
     height:25%;
-    background-color: grey;
+    background-color: black;
 }
-
+.Contact td h3 {
+    color: white;
+    font-weight: bold;
+}
 body{
     min-width: 100%;
 }
