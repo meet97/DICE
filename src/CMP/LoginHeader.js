@@ -32,12 +32,6 @@ export default function LoginHeader() {
                         <li>
                             <a href={"/Login"}> Login</a>
                         </li>
-                        <li>
-                            |
-                        </li>
-                        <li>
-                            <a href={"/SignUp"}> Register</a>
-                        </li>
 
                     </ul>
                 </nav>
