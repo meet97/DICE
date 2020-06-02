@@ -13,14 +13,13 @@ export default function Header() {
             width: '100%',
             left:'0px',
             top:'0',
-            height:'100px',
             zIndex:'9999',
             }}>
         <div style={{left:'10px',position: 'absolute', minWidth:'100%'}}>
             <links to="/"><img id='logo' src={logo} alt={"Hello"} height={'100px'}/>
             </links>
         </div>
-            <div style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
+            <div id='nav' style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
                 <nav>
                 <ul className="StyleUl">
                     <Link
@@ -28,7 +27,7 @@ export default function Header() {
                         to="About"
                         spy={true}
                         smooth={'easeInOutQuint'}
-                        offset={-70}
+                        offset={-100}
                         duration= {1500}
                         scrollsnap={true}
                     >
@@ -74,7 +73,7 @@ export default function Header() {
                         to="Project"
                         spy={true}
                         smooth={'easeInOutQuint'}
-                        offset={-70}
+                        offset={-100}
                         duration= {1500}
                         scrollsnap={true}
                     >
@@ -115,6 +114,68 @@ export default function Header() {
                         </li>
                     {/*</Link>*/}
                 </ul>
+                </nav>
+            </div>
+            <div id='mobNav' className='mobNavul' style={{left:'0', top:'88px', position: 'relative', minWidth:'100%'}}>
+                <nav>
+                    <ul>
+                        <Link
+                            activeClass="active"
+                            to="About"
+                            spy={true}
+                            smooth={'easeInOutQuint'}
+                            offset={-110}
+                            duration= {1500}
+                            scrollsnap={true}
+                        >
+                            <li>
+                                About
+                            </li>
+                        </Link>
+                        <Link
+                            activeClass="active"
+                            to="Services"
+                            spy={true}
+                            smooth={'easeInOutQuint'}
+                            offset={-70}
+                            duration= {1500}
+                        >
+                            <li>
+                                Services
+                            </li>
+                        </Link>
+
+                        <Link
+                            activeClass="active"
+                            to="People"
+                            spy={true}
+                            smooth={'easeInOutQuint'}
+                            offset={-70}
+                            duration= {1500}
+                        >
+                            <li>
+                                Team
+                            </li>
+                        </Link>
+
+                        <Link
+                            activeClass="active"
+                            to="Project"
+                            spy={true}
+                            smooth={'easeInOutQuint'}
+                            offset={-150}
+                            duration= {1500}
+                            scrollsnap={true}
+                        >
+                            <li>
+                                Projects
+                            </li>
+                        </Link>
+                        {/*<Link to="/Login">*/}
+                        <li>
+                            <a href={"/Login"}> Login</a>
+                        </li>
+                    </ul>
                 </nav>
             </div>
         </div>

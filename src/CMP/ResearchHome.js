@@ -1,13 +1,13 @@
 import React from "react";
-import AdminHeader from "./AdminHeader";
 import Copyright from "./Footer";
 import Projects from "./Projects";
+import ResearcherHeader from "./ResearcherHeader";
 
-export default function AdminHome() {
+export default function ResearcherHome() {
     return (
         <div>
             <div style={{height:'25%'}}>
-                <AdminHeader/>
+                <ResearcherHeader/>
             </div>
             <div style={{height:'50%'}}>
                 <Projects/>

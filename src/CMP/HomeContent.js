@@ -53,7 +53,7 @@ const homeContent = () => {
                 </Slide>
             </div>
 
-                <h1 style={{color:"rebeccapurple",paddingTop:"50px",textAlign:"center", paddingBottom:"50px"}}> Digital Integration Centre of Excellence </h1>
+                <h1 id='About' style={{color:"rebeccapurple",paddingTop:"50px",textAlign:"center", paddingBottom:"50px"}}> Digital Integration Centre of Excellence </h1>
 
             <div className='content' style={{position:'relative',
                 float:'left',
