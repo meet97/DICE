@@ -14,6 +14,8 @@ import Container from '@material-ui/core/Container';
 import Copyright from "./Footer";
 import Header from "./Header";
 import LoginHeader from "./LoginHeader";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,6 +43,7 @@ export default function SignUp() {
     const [email, setEmail] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [mobNo, setmodNo] = useState("");
 
     function validateForm() {
         return email.length > 0 && firstName.length >0 && lastName.length >0
