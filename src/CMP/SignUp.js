@@ -3,8 +3,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
 import {Link} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -12,10 +10,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Copyright from "./Footer";
-import Header from "./Header";
 import LoginHeader from "./LoginHeader";
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,6 +35,14 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         margin: theme.spacing(3, 0, 2),
     },
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: '95%',
+    },
+    phoneInput: {
+        margin: theme.spacing(1),
+        minWidth: '95%',
+    }
 }));
 
 export default function SignUp() {
@@ -43,7 +50,21 @@ export default function SignUp() {
     const [email, setEmail] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [mobNo, setmodNo] = useState("");
+    const [mobNo, setmobNo] = useState("");
+    const [age, setAge] = React.useState('');
+    const [open, setOpen] = React.useState(false);
+
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
 
     function validateForm() {
         return email.length > 0 && firstName.length >0 && lastName.length >0
@@ -112,6 +133,41 @@ export default function SignUp() {
                                 onChange={e=>setEmail(e.target.value)}
                             />
                         </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                variant="outlined"
+                                required
+                                fullWidth
+                                id="mobNo"
+                                label="Mobile Number"
+                                name="mobNo"
+                                autoComplete="tel"
+                                onChange={e=>setEmail(e.target.value)}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                        <FormControl className={classes.formControl}>
+                            <InputLabel id="role">Role</InputLabel>
+                            <Select
+                                defaultValue={"Senior Researcher"}
+                                labelId="role"
+                                id="memberRole"
+                                open={open}
+                                onClose={handleClose}
+                                onOpen={handleOpen}
+                                value={age}
+                                onChange={handleChange}
+                            >
+                                {/*<MenuItem value="">*/}
+                                {/*    <em>None</em>*/}
+                                {/*</MenuItem>*/}
+                                <MenuItem value={"Senior Researcher"}>Senior Researcher</MenuItem>
+                                <MenuItem value={"Technician"}>Technician</MenuItem>
+                                <MenuItem value={"Student"}>Student</MenuItem>
+                            </Select>
+                        </FormControl>
+                        </Grid>
+
                     </Grid>
                     <Button
                         type="submit"
