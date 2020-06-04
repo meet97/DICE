@@ -21,7 +21,7 @@ export default function AdminHeader() {
             </div>
             <div id='nav' style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
                 <nav>
-                    <ul>
+                    <ul className='StyleUl'>
                         <Link
                             activeClass="active"
                             to="Researcher"
