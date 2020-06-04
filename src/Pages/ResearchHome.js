@@ -1,7 +1,7 @@
 import React from "react";
-import Copyright from "./Footer";
-import Projects from "./Projects";
-import ResearcherHeader from "./ResearcherHeader";
+import Copyright from "../CMP/Footer";
+import Projects from "../CMP/Projects";
+import ResearcherHeader from "../CMP/ResearcherHeader";
 
 export default function ResearcherHome() {
     return (

@@ -5,8 +5,10 @@ import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import SignUp from "./CMP/SignUp";
 import ForgetPassword from "./CMP/ForgetPassword";
 import HomePage from "./CMP/HomePage";
-import AdminHome from "./CMP/AdminHome";
-import ResearcherHome from "./CMP/ResearchHome";
+import AdminHome from "./Pages/AdminHome";
+import ResearcherHome from "./Pages/ResearchHome";
+import People from "./CMP/People";
+import Researcher from "./Pages/Researcher";
 
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
                   <Route path="/Forget" component={ForgetPassword}/>
                   <Route path="/Admin" component={AdminHome}/>
                   <Route path="/Research" component={ResearcherHome}/>
+                  <Route path="/Researcher" component={Researcher}/>
               </Switch>
           </div>
       </Router>
