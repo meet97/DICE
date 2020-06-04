@@ -1,7 +1,7 @@
 import React from "react";
-import AdminHeader from "./AdminHeader";
-import Copyright from "./Footer";
-import Projects from "./Projects";
+import AdminHeader from "../CMP/AdminHeader";
+import Copyright from "../CMP/Footer";
+import Projects from "../CMP/Projects";
 
 export default function AdminHome() {
     return (
