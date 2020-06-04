@@ -10,11 +10,11 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Copyright from "./Footer";
-import LoginHeader from "./LoginHeader";
+import AdminHeader from "./AdminHeader";
+import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,13 +36,9 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(3, 0, 2),
     },
     formControl: {
-        margin: theme.spacing(1),
-        minWidth: '95%',
+        margin: theme.spacing(0),
+        width:'100%',
     },
-    phoneInput: {
-        margin: theme.spacing(1),
-        minWidth: '95%',
-    }
 }));
 
 export default function SignUp() {
@@ -50,24 +46,11 @@ export default function SignUp() {
     const [email, setEmail] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [mobNo, setmobNo] = useState("");
-    const [age, setAge] = React.useState('');
-    const [open, setOpen] = React.useState(false);
-
-    const handleChange = (event) => {
-        setAge(event.target.value);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
+    const [contact, setPhone] = useState("");
+    const [Role, setRole] = useState("");
 
     function validateForm() {
-        return email.length > 0 && firstName.length >0 && lastName.length >0
+        return email.length > 0 && firstName.length >0 && lastName.length >0 && contact.length === 10 && Role.length >0
     }
 
     function handleSubmit(event) {
@@ -76,14 +59,19 @@ export default function SignUp() {
         console.log(email);
         console.log(firstName);
         console.log(lastName);
+        console.log(Role);
+        console.log(contact);
         if(firstName==="Harman")
         {
             window.location = "/SignUp";
         }
     }
+    const handleChange = (event) => {
+        setRole(event.target.value);
+    };
     return (
 <div>
-    <LoginHeader/>
+    <AdminHeader/>
         <Container component="main" maxWidth="xs">
             <CssBaseline/>
 
@@ -94,7 +82,8 @@ export default function SignUp() {
                 <Typography component="h1" variant="h5">
                     Sign up
                 </Typography>
-                <form className={classes.form} noValidate>
+                <form className={classes.form} noValidate onSubmit={handleSubmit}>
+                    <FormControl className={classes.formControl}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sm={6}>
                             <TextField
@@ -138,42 +127,41 @@ export default function SignUp() {
                                 variant="outlined"
                                 required
                                 fullWidth
-                                id="mobNo"
-                                label="Mobile Number"
-                                name="mobNo"
-                                autoComplete="tel"
-                                onChange={e=>setEmail(e.target.value)}
+                                id="contact"
+                                label="Contact Detail"
+                                name="contact"
+                                autoComplete="phone"
+                                onChange={e=>setPhone(e.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
-                        <FormControl className={classes.formControl}>
-                            <InputLabel id="role">Role</InputLabel>
-                            <Select
-                                defaultValue={"Senior Researcher"}
-                                labelId="role"
-                                id="memberRole"
-                                open={open}
-                                onClose={handleClose}
-                                onOpen={handleOpen}
-                                value={age}
-                                onChange={handleChange}
-                            >
-                                {/*<MenuItem value="">*/}
-                                {/*    <em>None</em>*/}
-                                {/*</MenuItem>*/}
-                                <MenuItem value={"Senior Researcher"}>Senior Researcher</MenuItem>
-                                <MenuItem value={"Technician"}>Technician</MenuItem>
-                                <MenuItem value={"Student"}>Student</MenuItem>
-                            </Select>
-                        </FormControl>
+                            <FormControl variant="outlined" className={classes.formControl}>
+                                <InputLabel id="demo-simple-select-outlined-label">Role</InputLabel>
+                                <Select
+                                    labelId="demo-simple-select-outlined-label"
+                                    id="demo-simple-select-outlined"
+                                    value={Role}
+                                    autoWidth='true'
+                                    label="Role"
+                                    onChange={handleChange}
+                                    Required
+                                >
+                                    <MenuItem value="">
+                                        <em>None</em>
+                                    </MenuItem>
+                                    <MenuItem value={'Senior Researcher'}>Senior Researcher</MenuItem>
+                                    <MenuItem value={'Technician'}>Technician</MenuItem>
+                                    <MenuItem value={'Student'}>Student</MenuItem>
+                                </Select>
+                            </FormControl>
                         </Grid>
-
                     </Grid>
                     <Button
                         type="submit"
                         fullWidth
                         variant="contained"
                         color="primary"
+                        disabled={!validateForm()}
                         className={classes.submit}
                     >
                         Sign Up
@@ -185,6 +173,7 @@ export default function SignUp() {
                             </Link>
                         </Grid>
                     </Grid>
+                    </FormControl>
                 </form>
             </div>
         </Container>

@@ -19,23 +19,6 @@ export default function LoginHeader() {
                 <a href="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
                 </a>
             </div>
-            <div style={{right:'-950px',bottom: '-50px',position: 'relative'}}>
-                <nav>
-                    <ul className="StyleUl">
-
-                        <li>
-                            <a href={"/"}> Home </a>
-                        </li>
-                        <li>
-                            |
-                        </li>
-                        <li>
-                            <a href={"/Login"}> Login</a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
         </div>
     );
 }
