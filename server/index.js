@@ -2,7 +2,7 @@ const config = require('config');
 require('dotenv').config();
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
-const mongoose = require('mongoose');
+    const mongoose = require('mongoose');
 const users = require('./routes/Users');
 const auth = require('./routes/auth');
 const forgotpassword = require('./routes/forgotpassword');
