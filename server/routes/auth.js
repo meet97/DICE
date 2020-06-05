@@ -8,11 +8,12 @@ const{User} = require('../models/user');
 const express = require('express');
 const router = express.Router();
 
-router.post('/',async (req,res) =>{
+
+router.post('/', async (req,res) =>{
 
         const { error } = validate(req.body);
         if(error) {
-                return res.status(400).send(error.details[0].message);   
+                return res.status(400).send(error.details[0].message);
         }
         let user = await User.findOne({email: req.body.email});
         if(!user) {
@@ -24,7 +25,7 @@ router.post('/',async (req,res) =>{
         }
         const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
         res.send(token);
-        
+
 
 });
 
@@ -36,6 +37,5 @@ function validate(req) {
  
     return Joi.validate(req, schema);
 }
-
 
 module.exports = router;
