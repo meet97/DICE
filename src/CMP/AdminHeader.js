@@ -2,6 +2,7 @@
 import React from "react";
 import logo from '../img/Logo.jpeg'
 import {Link } from 'react-router-dom';
+import '../CMP/Demo.css';
 
 
 export default function AdminHeader() {

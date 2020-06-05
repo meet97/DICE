@@ -77,6 +77,10 @@ body{
         display: none;
     }
 
+    li .current{
+        background-color: mediumpurple;
+    }
+
     #logo
     {
         width:35%;
@@ -134,7 +138,6 @@ body{
         top: 50%;
         left: 30%;
     }
-
 
 }
 

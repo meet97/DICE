@@ -56,6 +56,9 @@ export default function SignIn() {
         {
             window.location = "/Admin";
         }
+        else{
+            window.alert("Incorrect email or password");
+        }
     }
     return (
         <div>
@@ -69,7 +72,7 @@ export default function SignIn() {
                     <Typography component="h1" variant="h5">
                         Sign in
                     </Typography>
-                    <form className={classes.form} onSubmit= {handleSubmit} >
+                    <form className={classes.form} onSubmit= {handleSubmit} method='post' >
                         <TextField
                             variant="outlined"
                             margin="normal"
