@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@hapi/joi": "^17.1.1",
+    "aws-sdk": "^2.691.0",
     "bcrypt": "^4.0.1",
     "config": "^3.3.1",
     "cra-template": "1.0.3",
     "dotenv": "latest",
     "express": "^4.17.1",
+    "express-generator-api": "^6.0.0",
     "gsap": "^3.2.6",
     "joi": "^14.3.1",
     "joi-objectid": "^3.0.1",
@@ -31,7 +33,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "npm start ./api/app.js ",
+    "dev": "run server start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,7 +56,13 @@
     "@material-ui/core": "^4.9.14",
     "@material-ui/icons": "^4.9.1",
     "formik": "^2.1.4",
+    "nodemon": "^2.0.4",
     "react-router-dom": "^5.2.0",
     "yup": "^0.28.5"
+  },
+  "proxy": {
+    "/*": {
+      "target": "http://localhost:5000"
+    }
   }
 }

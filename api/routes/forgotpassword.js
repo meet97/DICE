@@ -1,13 +1,15 @@
-const {User} = require('../models/user');
+
 const jwt =require('jsonwebtoken');
 require('dotenv').config();
 const config = require('config');
 var nodemailer = require('nodemailer');
 const express = require('express');
-const router = express.Router();
+const app = express.Router();
 
-router.post('/',async (req,res) => {
-    
+app.get('/',async (req,res,next) => {
+
+    res.send("forge is working");
+
      let user = await User.findOne({email : req.body.email})
 
      if(!user){
@@ -16,7 +18,7 @@ router.post('/',async (req,res) => {
      else{
          const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
          const resetLink = "http://"+process.env.HOST+":"+process.env.PORT+"/api/resetpassword?token=" + token
-        
+
         var transporter = nodemailer.createTransport({
              service : 'gmail',
              auth:{
@@ -27,7 +29,7 @@ router.post('/',async (req,res) => {
 
         var mailoptions = {
              from    : 'process.env.MAIL_USERID',
-             to      :  req.body.email , 
+             to      :  req.body.email ,
              subject : 'Reset password!' ,
              text : 'Please click below link to reset your password! \n' + resetLink
          }
@@ -40,9 +42,9 @@ router.post('/',async (req,res) => {
             res.send(resetLink);
         }
         });
-         
+
      }
 
 });
 
-module.exports = router;
+module.exports = app;
