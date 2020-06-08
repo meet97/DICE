@@ -72,7 +72,7 @@ export default function SignIn() {
                     <Typography component="h1" variant="h5">
                         Sign in
                     </Typography>
-                    <form className={classes.form} onSubmit= {handleSubmit} method='post' >
+                    <form className={classes.form} method='POST'  action='/auth'>
                         <TextField
                             variant="outlined"
                             margin="normal"

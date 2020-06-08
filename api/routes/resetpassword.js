@@ -1,4 +1,4 @@
-const {User} = require('../models/user'); 
+
 const config = require('config');
 require('dotenv').config();
 const _ = require('lodash');
