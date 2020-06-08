@@ -4,6 +4,7 @@ require('dotenv').config();
 const config = require('config');
 const bcrypt = require('bcrypt');
 const express = require('express');
+const User = require('../models/Users');
 const app = express.Router();
 
 app.post('/', async (req,res) =>{
