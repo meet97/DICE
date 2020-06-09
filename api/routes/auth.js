@@ -30,7 +30,22 @@ router.post('/',async (req,res) =>{
         return res.status(400).send("Incorrect password!");
     }
 
+    else
+    {
+        const validRole = (user.role);
+        if(validRole==="admin"){
+            return res.redirect("/Admin");
+        }
+        else{
+            return res.redirect("/Research");
+        }
+
+    }
+
+
+
     const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
+    res.redirect('/Admin');
     res.send(token);
 
 
