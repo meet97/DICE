@@ -47,19 +47,6 @@ export default function SignIn() {
         return email.length > 0 && password.length > 0;
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        console.log("Submitting");
-        console.log(email);
-        console.log(password);
-        if(password==="Harman")
-        {
-            window.location = "/Admin";
-        }
-        else{
-            window.alert("Incorrect email or password");
-        }
-    }
     return (
         <div>
             <LoginHeader/>
