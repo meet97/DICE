@@ -8,7 +8,6 @@ const express = require('express');
 const app = express();
 
 
-
 if(!process.env["PRIVATEKEY"]){
   console.error('Privatekey is not defined!');
   process.exit(1);
@@ -20,7 +19,7 @@ mongoose.connect(process.env["DB_CONNECTION"])
 app.use(express.json());
 app.use('/auth', require('./routes/auth'));
 app.use('/register',require('./routes/users'));
-
+app.use('/getServices', require('./routes/getServices'));
 
 const port = 4500;
 app.get('/', function (req, res) {
