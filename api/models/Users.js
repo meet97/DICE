@@ -1,3 +1,6 @@
+const config = require('config');
+require('dotenv').config();
+const joi = require('@hapi/joi');
 const Joi = require('joi');
 const mongoose = require('mongoose');
 
