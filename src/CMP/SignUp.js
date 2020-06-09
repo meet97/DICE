@@ -44,24 +44,24 @@ const useStyles = makeStyles((theme) => ({
 export default function SignUp() {
     const classes = useStyles();
     const [email, setEmail] = useState("");
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [contact, setPhone] = useState("");
-    const [Role, setRole] = useState("");
+    const [fname, setFirstName] = useState("");
+    const [lname, setLastName] = useState("");
+    const [mobileNo, setPhone] = useState("");
+    const [role, setRole] = useState("");
 
     function validateForm() {
-        return email.length > 0 && firstName.length >0 && lastName.length >0 && contact.length === 10 && Role.length >0
+        return email.length > 0 && fname.length >0 && lname.length >0 && mobileNo.length === 10 && role.length >0
     }
 
     function handleSubmit(event) {
         event.preventDefault();
         console.log("Submitting");
         console.log(email);
-        console.log(firstName);
-        console.log(lastName);
-        console.log(Role);
-        console.log(contact);
-        if(firstName==="Harman")
+        console.log(fname);
+        console.log(lname);
+        console.log(role);
+        console.log(mobileNo);
+        if(fname==="Harman")
         {
             window.location = "/SignUp";
         }
@@ -88,7 +88,7 @@ export default function SignUp() {
                         <Grid item xs={12} sm={6}>
                             <TextField
                                 autoComplete="fname"
-                                name="firstName"
+                                name="fname"
                                 variant="outlined"
                                 required
                                 fullWidth
@@ -105,7 +105,7 @@ export default function SignUp() {
                                 fullWidth
                                 id="lastName"
                                 label="Last Name"
-                                name="lastName"
+                                name="lname"
                                 autoComplete="lname"
                                 onChange={e=>setLastName(e.target.value)}
                             />
@@ -129,7 +129,7 @@ export default function SignUp() {
                                 fullWidth
                                 id="contact"
                                 label="Contact Detail"
-                                name="contact"
+                                name="mobileNo"
                                 autoComplete="phone"
                                 onChange={e=>setPhone(e.target.value)}
                             />
@@ -140,7 +140,8 @@ export default function SignUp() {
                                 <Select
                                     labelId="demo-simple-select-outlined-label"
                                     id="demo-simple-select-outlined"
-                                    value={Role}
+                                    value={role}
+                                    name="role"
                                     autoWidth='true'
                                     label="Role"
                                     onChange={handleChange}

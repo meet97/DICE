@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from "react";
 import './App.css';
 import LoginForm from "./CMP/Login";
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
@@ -8,6 +8,7 @@ import HomePage from "./CMP/HomePage";
 import AdminHome from "./Pages/AdminHome";
 import ResearcherHome from "./Pages/ResearchHome";
 import Researcher from "./Pages/Researcher";
+import {Component} from "react";
 
 class App extends Component {
     constructor(props) {

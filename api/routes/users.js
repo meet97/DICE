@@ -7,7 +7,7 @@ const {User,validate} = require('../Models/Users');
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser')
-
+var random = require("randomstring");
 router.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/', async (req, res) => {
@@ -28,8 +28,13 @@ router.post('/', async (req, res) => {
     // Insert the new user if they do not exist yet
     user = new User(_.pick(req.body,['fname','lname','email','password','mobileNo','role'])
     );
+
+    const password = random.generate({
+      length: 10,
+      charset: 'alphabetic'
+    });
     const salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(user.password,salt);
+    user.password = await bcrypt.hash(password,salt);
 
     await user.save();
     const token = jwt.sign({_id:user._id},process.env.PRIVATEKEY);

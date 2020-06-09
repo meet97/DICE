@@ -1,10 +1,8 @@
 const config = require('config');
 require('dotenv').config();
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 Joi.objectId = require('joi-objectid')(Joi);
 const mongoose = require('mongoose');
-const resetpassword = require('./routes/resetpassword');
-const uploaddoc = require('./routes/UploadDoc');
 const cors= require('cors');
 const express = require('express');
 const app = express();
@@ -22,8 +20,7 @@ mongoose.connect(process.env["DB_CONNECTION"])
 app.use(express.json());
 app.use('/auth', require('./routes/auth'));
 app.use('/register',require('./routes/users'));
-app.use('/api/resetpassword',resetpassword);
-app.use('/api/uploaddoc',uploaddoc);
+
 
 const port = 4500;
 app.get('/', function (req, res) {
