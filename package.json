@@ -60,9 +60,5 @@
     "react-router-dom": "^5.2.0",
     "yup": "^0.28.5"
   },
-  "proxy": {
-    "/*": {
-      "target": "http://localhost:5000"
-    }
-  }
+  "proxy": "http://localhost:4500"
 }

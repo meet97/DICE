@@ -1,40 +1,49 @@
-const Joi = require('@hapi/joi');
+const Joi = require('joi');
 const jwt =require('jsonwebtoken');
 require('dotenv').config();
 const config = require('config');
 const bcrypt = require('bcrypt');
+const _ = require('lodash');
+const {User} = require('../Models/Users');
 const express = require('express');
-const app = express.Router();
+const router = express.Router();
+const bodyParser = require('body-parser')
 
-app.post('/', async (req,res) =>{
+router.use(bodyParser.urlencoded({extended: true}));
 
-    res.send("Auth is working");
-    const { error } = validate(req.body);
+router.post('/',async (req,res) =>{
+
+    const { error } = validate(req.body)
     if(error) {
         return res.status(400).send(error.details[0].message);
     }
+
+
+    console.log(req.body.email + " ");
     let user = await User.findOne({email: req.body.email});
     if(!user) {
-        return res.status(400).send("Incorrect Email or password!");
+        console.log(user);
+        return res.status(400).send("Incorrect Email!");
     }
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if(!validPassword){
-        return res.status(400).send("Incorrect Email or password!");
+        return res.status(400).send("Incorrect password!");
     }
+
     const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
     res.send(token);
 
 
 });
 
-module.exports = app;
-
 function validate(req) {
     const schema = {
         email: Joi.string().min(5).max(255).required().email(),
         password: Joi.string().min(5).max(255).required()
     };
-    console.log("Hey");
- 
+
     return Joi.validate(req, schema);
 }
+
+
+module.exports = router;

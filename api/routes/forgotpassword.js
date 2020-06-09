@@ -2,8 +2,9 @@
 const jwt =require('jsonwebtoken');
 require('dotenv').config();
 const config = require('config');
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 const express = require('express');
+const {User} = require("../Models/Users");
 const app = express.Router();
 
 app.get('/',async (req,res,next) => {
