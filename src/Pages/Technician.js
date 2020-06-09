@@ -40,7 +40,7 @@ class Technician extends Component
                 <AdminHeader/>
                 <div id="People" style={{width:'100%'}}>
                     <div>
-                        <h1 style={{textAlign:"Center", color:"rebeccapurple", paddingTop:"75px", paddingBottom:'5px'}}>Researchers</h1>
+                        <h1 style={{textAlign:"Center", color:"rebeccapurple", paddingTop:"75px", paddingBottom:'5px'}}>Technicians</h1>
                         {peopleHolher}
                     </div>
                 </div>
