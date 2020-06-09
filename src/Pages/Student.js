@@ -5,7 +5,7 @@ import PeopleList from "../CMP/PeopleList";
 import AdminHeader from "../CMP/AdminHeader";
 import Copyright from "../CMP/Footer";
 
-class Researcher extends Component
+class Student extends Component
 {
     constructor(props){
         super(props)
@@ -23,7 +23,7 @@ class Researcher extends Component
     }
 
     callApi = async () => {
-        const response = await fetch("http://localhost:4500/team");
+        const response = await fetch("http://localhost:4500/student");
         const body = await response.json();
         if (response.status !== 200) throw Error(body.message);
 
@@ -50,4 +50,4 @@ class Researcher extends Component
     }
 }
 
-export default Researcher;
+export default Student;

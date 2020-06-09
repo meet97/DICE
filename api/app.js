@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const cors= require('cors');
 const express = require('express');
 const app = express();
+const {User} = require('./Models/Users');
 
 
 
@@ -17,9 +18,13 @@ mongoose.connect(process.env["DB_CONNECTION"])
     .then(() => console.log('Now connected to MongoDB database!'))
     .catch(err => console.error('Something went wrong', err));
 
+app.use(cors());
 app.use(express.json());
 app.use('/auth', require('./routes/auth'));
 app.use('/register',require('./routes/users'));
+app.use('/team',require('./routes/Team'));
+app.use('/technician',require('./routes/Technician'));
+app.use('/student',require('./routes/Student'));
 
 
 const port = 4500;

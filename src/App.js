@@ -9,6 +9,8 @@ import AdminHome from "./Pages/AdminHome";
 import ResearcherHome from "./Pages/ResearchHome";
 import Researcher from "./Pages/Researcher";
 import {Component} from "react";
+import Technician from "./Pages/Technician";
+import Student from "./Pages/Student";
 
 class App extends Component {
     constructor(props) {
@@ -37,7 +39,8 @@ class App extends Component {
                         <Route path="/Admin" component={AdminHome}/>
                         <Route path="/Research" component={ResearcherHome}/>
                         <Route path="/Researcher" component={Researcher}/>
-                        <Route path='/auth' location='../server/routes/auth'/>
+                        <Route path="/technician" component={Technician}/>
+                        <Route path="/student" component={Student}/>
                     </Switch>
                 </div>
             </Router>

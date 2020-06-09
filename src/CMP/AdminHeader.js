@@ -33,12 +33,7 @@ export default function AdminHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="Services"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to="/technician"
                         >
                             <li>
                                 Technician
@@ -48,12 +43,7 @@ export default function AdminHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="People"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to='/student'
                         >
                             <li>
                                 Students
