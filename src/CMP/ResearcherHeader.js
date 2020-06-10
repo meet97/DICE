@@ -1,8 +1,7 @@
 
 import React from "react";
 import logo from '../img/Logo.jpeg'
-import { Link } from "react-scroll";
-import {Link as links} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 export default function ResearcherHeader() {
@@ -15,7 +14,7 @@ export default function ResearcherHeader() {
             zIndex:'9999',
         }}>
             <div style={{left:'10px',position: 'absolute', minWidth:'100%'}}>
-                <a href="/"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
+                <a href="/Research"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
                 </a>
             </div>
             <div id='nav' style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
@@ -38,12 +37,7 @@ export default function ResearcherHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="Services"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to="/technician"
                         >
                             <li>
                                 Technician
@@ -53,12 +47,7 @@ export default function ResearcherHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="People"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to="/student"
                         >
                             <li>
                                 Students
@@ -68,7 +57,13 @@ export default function ResearcherHeader() {
                             |
                         </li>
                         <li>
-                            <a href={"/SignUp"}> Logout</a>
+                            <a href={"/SignUpRe"}> Register</a>
+                        </li>
+                        <li>
+                            |
+                        </li>
+                        <li>
+                            <a href={"/Logout"}> Logout</a>
                         </li>
                         {/*</Link>*/}
                     </ul>
@@ -79,13 +74,7 @@ export default function ResearcherHeader() {
                 <nav>
                     <ul>
                         <Link
-                            activeClass="active"
-                            to="Researcher"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
-                            scrollsnap={true}
+                            to="/Profile"
                         >
                             <li>
                                 Profile
@@ -95,12 +84,7 @@ export default function ResearcherHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="Services"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to="/technician"
                         >
                             <li>
                                 Technician
@@ -110,12 +94,7 @@ export default function ResearcherHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="People"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to="/student"
                         >
                             <li>
                                 Students
@@ -125,7 +104,13 @@ export default function ResearcherHeader() {
                             |
                         </li>
                         <li>
-                            <a href={"/SignUp"}> Logout</a>
+                            <a href={"/SignUp"}> Register</a>
+                        </li>
+                        <li>
+                            |
+                        </li>
+                        <li>
+                            <a href={"/Logout"}> Logout</a>
                         </li>
                         {/*</Link>*/}
                     </ul>
