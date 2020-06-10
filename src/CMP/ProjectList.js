@@ -14,5 +14,5 @@ const ProjectList = (props) => {
         </div>
     )
 
-}
+};
 export default ProjectList;

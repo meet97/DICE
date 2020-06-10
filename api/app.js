@@ -28,6 +28,7 @@ app.use('/team',require('./routes/Team'));
 app.use('/technician',require('./routes/Technician'));
 app.use('/student',require('./routes/Student'));
 app.use('/tean',require('./routes/TeanHomePage'));
+app.use('/gProject',require('./routes/getProjects'));
 
 const port = 4500;
 app.get('/', function (req, res) {
