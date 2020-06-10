@@ -40,11 +40,11 @@ const useStyles = makeStyles((theme) => ({
 export default function PasswordChange() {
     const classes = useStyles();
 
-    const [email, setEmail] = useState("");
+    const [confirmpassword, setconfirmPassword] = useState("");
     const [password, setPassword] = useState("");
 
     function validateForm() {
-        return email.length > 0 && password.length > 0;
+        return confirmpassword === password;
     }
 
     return (
@@ -52,39 +52,39 @@ export default function PasswordChange() {
             <LoginHeader/>
             <Container component="main" maxWidth="xs">
                 <CssBaseline/>
-                <div className={classes.paper} style={{top: '50px', position: 'relative', height:"100%"}}>
+                <div className={classes.paper} style={{top: '100px', position: 'relative', height:"100%"}}>
                     <Avatar className={classes.avatar}>
                         <LockOutlinedIcon/>
                     </Avatar>
                     <Typography component="h1" variant="h5">
                         Reset Password
                     </Typography>
-                    <form className={classes.form} method='POST'  action='/auth'>
+                    <form className={classes.form} method='POST'  action='/resetpassword'>
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            placeholder="Enter code emailed"
+                            placeholder="Enter new Password"
                             required
                             fullWidth
-                            id="email"
-                            label="Authentication Code"
-                            name="email"
-                            autoComplete="email"
+                            id="password"
+                            label="password"
+                            name="password"
+                            autoComplete="password"
                             autoFocus
-                            onChange={e=>setEmail(e.target.value)}
+                            onChange={e=>setPassword(e.target.value)}
 
                         />
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            placeholder="Enter new password"
+                            placeholder="Confirm password"
                             required
                             fullWidth
-                            name="password"
-                            label="New Password"
-                            type="password"
-                            id="password"
-                            onChange={e => setPassword(e.target.value)}
+                            name="confirmpassword"
+                            label="Confirm Password"
+                            type="confirmpassword"
+                            id="confirmpassword"
+                            onChange={e => setconfirmPassword(e.target.value)}
                             autoComplete="current-password"
                         />
                         <Button

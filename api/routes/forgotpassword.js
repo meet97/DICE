@@ -6,22 +6,27 @@ const nodemailer = require('nodemailer');
 const express = require('express');
 const {User} = require("../Models/Users");
 const app = express.Router();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/',async (req,res,next) => {
 
     //res.send("forge is working");
-    console.log("in forgot api");
+    console.log(req.body.email);
+
      let user = await User.findOne({email : req.body.email})
 
+    console.log(user.email);
      if(!user){
          return res.status(400).send("User not found")
      }
      else{
          const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
-         const resetLink = "http://"+process.env.HOST+":"+process.env.PORT+"/resetpassword?token=" + token
+         const resetLink = "http://"+process.env.HOST+":"+process.env.CLIENTPORT+"/PasswordChange?token=" + token
 
         var transporter = nodemailer.createTransport({
-             service : 'outlook',
+             service : 'gmail',
              auth:{
                  user : process.env.MAIL_USERID,
                  pass : process.env.MAIL_PASSWORD
@@ -40,7 +45,7 @@ app.post('/',async (req,res,next) => {
             res.send('Not able to send email!')
         }
         else{
-            res.send(resetLink);
+            res.redirect('/Login');
         }
         });
 

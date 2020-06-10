@@ -41,8 +41,11 @@ router.post('/',async (req,res) =>{
 
             return res.redirect("/Admin");
         }
-        else{
-            return res.redirect("/Research");
+        else  {
+            if(user.__v === 0)
+                return res.redirect("/PasswordChange");
+            else
+                return res.redirect("/Research");
         }
 
     }
