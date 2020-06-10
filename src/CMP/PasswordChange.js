@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-export default function SignIn() {
+export default function PasswordChange() {
     const classes = useStyles();
 
     const [email, setEmail] = useState("");
@@ -57,17 +57,17 @@ export default function SignIn() {
                         <LockOutlinedIcon/>
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        Sign in
+                        Reset Password
                     </Typography>
                     <form className={classes.form} method='POST'  action='/auth'>
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            placeholder="Enter your email"
+                            placeholder="Enter code emailed"
                             required
                             fullWidth
                             id="email"
-                            label="Email Address"
+                            label="Authentication Code"
                             name="email"
                             autoComplete="email"
                             autoFocus
@@ -77,11 +77,11 @@ export default function SignIn() {
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            placeholder="Enter your password"
+                            placeholder="Enter new password"
                             required
                             fullWidth
                             name="password"
-                            label="Password"
+                            label="New Password"
                             type="password"
                             id="password"
                             onChange={e => setPassword(e.target.value)}
@@ -97,18 +97,6 @@ export default function SignIn() {
                         >
                             Sign In
                         </Button>
-                        <Grid container>
-                            <Grid item xs>
-                                <Link to="/Forget">
-                                    Forgot password?
-                                </Link>
-                            </Grid>
-                            <Grid item>
-                                <Link to="/SignUp">
-                                    {"Don't have an account? Sign Up"}
-                                </Link>
-                            </Grid>
-                        </Grid>
                     </form>
                 </div>
             </Container>
