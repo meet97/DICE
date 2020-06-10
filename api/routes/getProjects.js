@@ -2,14 +2,13 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
-const {services} = require('../models/model_services');
+const {projects} = require('../models/model_projects');
 
 router.use(bodyParser.urlencoded({extended: true}));
-router.get('/',async (req, res) => {
-
-    let serv = await services.find();
-    console.log(serv);
-    res.send(serv);
+router.get('/',async (req, res)=> {
+    let p = await projects.find();
+    console.log(p);
+    res.send(p);
 });
 
 module.exports = router;
