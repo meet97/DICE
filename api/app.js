@@ -9,7 +9,6 @@ const app = express();
 const {User} = require('./Models/Users');
 
 
-
 if(!process.env["PRIVATEKEY"]){
   console.error('Privatekey is not defined!');
   process.exit(1);
@@ -22,11 +21,11 @@ app.use(cors());
 app.use(express.json());
 app.use('/auth', require('./routes/auth'));
 app.use('/register',require('./routes/users'));
+app.use('/getServices', require('./routes/getServices'));
 app.use('/team',require('./routes/Team'));
 app.use('/technician',require('./routes/Technician'));
 app.use('/student',require('./routes/Student'));
 app.use('/tean',require('./routes/TeanHomePage'));
-
 
 const port = 4500;
 app.get('/', function (req, res) {

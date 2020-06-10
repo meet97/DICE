@@ -6,7 +6,7 @@ import PeopleList from "./PeopleList";
 class People extends Component
 {
     constructor(props){
-        super(props)
+        super(props);
         this.state={
             team:[]
         }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from 'react';
 import './App.css';
 import LoginForm from "./CMP/Login";
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
@@ -8,12 +8,33 @@ import HomePage from "./CMP/HomePage";
 import AdminHome from "./Pages/AdminHome";
 import ResearcherHome from "./Pages/ResearchHome";
 import Researcher from "./Pages/Researcher";
-import {Component} from "react";
 import Technician from "./Pages/Technician";
 import Student from "./Pages/Student";
 import PasswordChange from "./CMP/PasswordChange";
 
 class App extends Component {
+    // state = {
+    //     service_id:'',
+    //     service_name: '',
+    //     posts: []
+    // };
+    //
+    // mountService = () =>
+    // {
+    //     this.getService();
+    // }
+    // getService = () => {
+    //     Axios.get('/api')
+    //         .then((response) => {
+    //             const data = response.data;
+    //             this.setState({post: data})
+    //             console.log("Data has been received");
+    //         })
+    //         .catch(() => {
+    //             alert("Error receiving data");
+    //         })
+    // };
+
     constructor(props) {
         super(props);
         this.state = {apiResponse: ""};
