@@ -70,13 +70,7 @@ export default function AdminHeader() {
                 <nav>
                     <ul>
                         <Link
-                            activeClass="active"
-                            to="Researcher"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
-                            scrollsnap={true}
+                            to="/Researcher"
                         >
                             <li>
                                 Researcher
@@ -86,12 +80,7 @@ export default function AdminHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="Services"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to="/technician"
                         >
                             <li>
                                 Technician
@@ -101,12 +90,7 @@ export default function AdminHeader() {
                             |
                         </li>
                         <Link
-                            activeClass="active"
-                            to="People"
-                            spy={true}
-                            smooth={'easeInOutQuint'}
-                            offset={-70}
-                            duration= {1500}
+                            to='/student'
                         >
                             <li>
                                 Students
@@ -123,7 +107,7 @@ export default function AdminHeader() {
                             |
                         </li>
                         <li>
-                            <a href={"/"}>Logout</a>
+                            <a href={"/"}> Logout</a>
                         </li>
                     </ul>
                 </nav>

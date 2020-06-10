@@ -24,12 +24,12 @@ router.post('/',async (req,res) =>{
     let user = await User.findOne({email: req.body.email});
     if(!user) {
 
-        return res.status(400).send("Incorrect Email!");
+        return res.redirect('/signIn');
     }
 
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if(!validPassword){
-        return res.status(400).send("Incorrect password!");
+        return res.redirect('/signIn');
     }
 
     else

@@ -11,6 +11,8 @@ import Researcher from "./Pages/Researcher";
 import Technician from "./Pages/Technician";
 import Student from "./Pages/Student";
 import PasswordChange from "./CMP/PasswordChange";
+import LoginError from "./CMP/LoginError";
+import SignUpResearcher from "./CMP/SignuUpResearch";
 
 class App extends Component {
     // state = {
@@ -63,7 +65,9 @@ class App extends Component {
                         <Route path="/Researcher" component={Researcher}/>
                         <Route path="/technician" component={Technician}/>
                         <Route path="/student" component={Student}/>
+                        <Route path="/signIn" component={LoginError}/>
                         <Route path="/PasswordChange" component={PasswordChange}/>
+                        <Route path="/SignUpRe" component={SignUpResearcher}/>
                     </Switch>
                 </div>
             </Router>
