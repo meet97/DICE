@@ -43,14 +43,14 @@ export default function ForgetPassword() {
             <Header/>
             <Container component="main" maxWidth="xs">
                 <CssBaseline />
-                <div className={classes.paper}  style={{top:'50px', position: 'relative'}}>
+                <div className={classes.paper}  style={{top:'130px', position: 'relative'}}>
                     <Avatar className={classes.avatar}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
                         Forget Password
                     </Typography>
-                    <form className={classes.form} noValidate>
+                    <form className={classes.form} method='POST'  action='/forgot'>
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -75,7 +75,9 @@ export default function ForgetPassword() {
                     </form>
                 </div>
             </Container>
+            <div style={{position:"relative" , bottom:'-250px'}}>
             <Copyright/>
+            </div>
         </div>
     );
 }

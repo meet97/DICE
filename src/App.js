@@ -63,7 +63,7 @@ class App extends Component {
                         <Route path="/Researcher" component={Researcher}/>
                         <Route path="/technician" component={Technician}/>
                         <Route path="/student" component={Student}/>
-                        <Route path="/ChangePassword" component={PasswordChange}/>
+                        <Route path="/PasswordChange" component={PasswordChange}/>
                     </Switch>
                 </div>
             </Router>

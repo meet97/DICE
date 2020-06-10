@@ -10,8 +10,8 @@ const router = express.Router();
 
 router.post('/', async(req,res) => {
 
-    if(req.headers){          
-        var token = req.headers.token
+    if(req.header){
+        var token = req.params.token;
         jwt.verify(token, process.env.PRIVATEKEY, (err, decoded) => {
         if (err) {
             return res.json({
@@ -20,19 +20,21 @@ router.post('/', async(req,res) => {
           });
         } else {
             req.decoded = decoded;
-            
+
         }
     });
    }    console.log(User.password)  
       let user = await  User.findOne({_id : req.decoded._id})
       if(user){
-         user.password = req.body.NewPassword
-         user.save(function(err,doc){
+         user.password = req.body.NewPassword;
+
+          user.save(function(err,doc){
             if(err){
                res.send('not updated')
             }
             else{
-               res.send('updated successfully')
+
+                res.send('updated successfully')
             }
          });
       }

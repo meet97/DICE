@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const cors= require('cors');
 const express = require('express');
 const app = express();
-const {User} = require('./Models/Users');
+
 
 
 if(!process.env["PRIVATEKEY"]){
@@ -21,6 +21,8 @@ app.use(cors());
 app.use(express.json());
 app.use('/auth', require('./routes/auth'));
 app.use('/register',require('./routes/users'));
+app.use('/forgot', require('./routes/forgotpassword'));
+app.use('/resetpassword', require('./routes/resetpassword'));
 app.use('/getServices', require('./routes/getServices'));
 app.use('/team',require('./routes/Team'));
 app.use('/technician',require('./routes/Technician'));
