@@ -7,10 +7,10 @@ const express = require('express');
 const {User} = require("../Models/Users");
 const app = express.Router();
 
-app.get('/',async (req,res,next) => {
+app.post('/',async (req,res,next) => {
 
-    res.send("forge is working");
-
+    //res.send("forge is working");
+    console.log("in forgot api");
      let user = await User.findOne({email : req.body.email})
 
      if(!user){
@@ -18,10 +18,10 @@ app.get('/',async (req,res,next) => {
      }
      else{
          const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
-         const resetLink = "http://"+process.env.HOST+":"+process.env.PORT+"/api/resetpassword?token=" + token
+         const resetLink = "http://"+process.env.HOST+":"+process.env.PORT+"/resetpassword?token=" + token
 
         var transporter = nodemailer.createTransport({
-             service : 'gmail',
+             service : 'outlook',
              auth:{
                  user : process.env.MAIL_USERID,
                  pass : process.env.MAIL_PASSWORD

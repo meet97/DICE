@@ -2,6 +2,7 @@
 const config = require('config');
 require('dotenv').config();
 const _ = require('lodash');
+const {User} = require("../Models/Users");
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const express = require('express');

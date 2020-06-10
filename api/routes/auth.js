@@ -7,6 +7,8 @@ const _ = require('lodash');
 const {User} = require('../Models/Users');
 const express = require('express');
 const router = express.Router();
+const app = express();
+const session = require('express-session');
 const bodyParser = require('body-parser')
 
 router.use(bodyParser.urlencoded({extended: true}));
@@ -19,12 +21,12 @@ router.post('/',async (req,res) =>{
     }
 
 
-    console.log(req.body.email + " ");
     let user = await User.findOne({email: req.body.email});
     if(!user) {
-        console.log(user);
+
         return res.status(400).send("Incorrect Email!");
     }
+
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if(!validPassword){
         return res.status(400).send("Incorrect password!");
@@ -34,6 +36,9 @@ router.post('/',async (req,res) =>{
     {
         const validRole = (user.role);
         if(validRole==="admin"){
+
+            app.use(session({resave: true, saveUninitialized: true, secret: process.env["PRIVATEKEY"], cookie: { maxAge: 60000 }}));
+
             return res.redirect("/Admin");
         }
         else{
@@ -45,7 +50,7 @@ router.post('/',async (req,res) =>{
 
 
     const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
-    res.redirect('/Admin');
+
     res.send(token);
 
 
