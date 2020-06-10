@@ -10,6 +10,7 @@ import ResearcherHome from "./Pages/ResearchHome";
 import Researcher from "./Pages/Researcher";
 import Technician from "./Pages/Technician";
 import Student from "./Pages/Student";
+import PasswordChange from "./CMP/PasswordChange";
 
 class App extends Component {
     // state = {
@@ -62,6 +63,7 @@ class App extends Component {
                         <Route path="/Researcher" component={Researcher}/>
                         <Route path="/technician" component={Technician}/>
                         <Route path="/student" component={Student}/>
+                        <Route path="/ChangePassword" component={PasswordChange}/>
                     </Switch>
                 </div>
             </Router>
