@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const {User,validate} = require('../Models/Users');
 const express = require('express');
 const router = express.Router();
+const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser')
 var random = require("randomstring");
 router.use(bodyParser.urlencoded({extended: true}));
@@ -32,6 +33,30 @@ router.post('/', async (req, res) => {
     const password = random.generate({
       length: 10,
       charset: 'alphabetic'
+    });
+
+    var transporter = nodemailer.createTransport({
+      service : 'gmail',
+      auth:{
+        user : process.env.MAIL_USERID,
+        pass : process.env.MAIL_PASSWORD
+      }
+    });
+
+    var mailoptions = {
+      from    : 'process.env.MAIL_USERID',
+      to      :  req.body.email ,
+      subject : 'Welcome to Dice' ,
+      text : 'Welcome to Dice, login using password below and change it on login  \n' + password
+    }
+
+    transporter.sendMail(mailoptions, function(error,info){
+      if(error){
+        res.send('Not able to send email!')
+      }
+      else{
+        res.redirect('/Login');
+      }
     });
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(password,salt);

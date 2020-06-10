@@ -5,7 +5,7 @@ const config = require('config');
 const nodemailer = require('nodemailer');
 const express = require('express');
 const {User} = require("../Models/Users");
-const app = express.Router();
+const app = express();
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));

@@ -7,9 +7,8 @@ const _ = require('lodash');
 const {User} = require('../Models/Users');
 const express = require('express');
 const router = express.Router();
-const app = express();
 const session = require('express-session');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({extended: true}));
 
@@ -36,8 +35,8 @@ router.post('/',async (req,res) =>{
     {
         const validRole = (user.role);
         if(validRole==="admin"){
-
-            app.use(session({resave: true, saveUninitialized: true, secret: process.env["PRIVATEKEY"], cookie: { maxAge: 60000 }}));
+        var ses=req.session();
+            router.use(session({resave: true, saveUninitialized: true, secret: process.env["PRIVATEKEY"], cookie: { maxAge: 60000 }}));
 
             return res.redirect("/Admin");
         }

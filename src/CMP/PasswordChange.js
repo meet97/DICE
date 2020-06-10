@@ -66,13 +66,12 @@ export default function PasswordChange() {
                             placeholder="Enter new Password"
                             required
                             fullWidth
-                            id="password"
-                            label="password"
                             name="password"
+                            label="Password"
+                            type="password"
+                            id="password"
+                            onChange={e => setPassword(e.target.value)}
                             autoComplete="password"
-                            autoFocus
-                            onChange={e=>setPassword(e.target.value)}
-
                         />
                         <TextField
                             variant="outlined"
@@ -82,7 +81,7 @@ export default function PasswordChange() {
                             fullWidth
                             name="confirmpassword"
                             label="Confirm Password"
-                            type="confirmpassword"
+                            type="password"
                             id="confirmpassword"
                             onChange={e => setconfirmPassword(e.target.value)}
                             autoComplete="current-password"
