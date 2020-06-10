@@ -4,6 +4,7 @@ const joi = require('@hapi/joi');
 const Joi = require('joi');
 const mongoose = require('mongoose');
 
+
 const User = mongoose.model('User', new mongoose.Schema({
     fname: {
         type: String,
@@ -43,6 +44,7 @@ function validateUser(user) {
     };
     return Joi.validate(user, schema);
 }
+
 
 exports.User = User;
 exports.validate = validateUser;
