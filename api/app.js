@@ -10,6 +10,7 @@ const cookieparser = require('cookie-parser')
 const session = require('express-session');
 
 
+
 if(!process.env["PRIVATEKEY"]){
   console.error('Privatekey is not defined!');
   process.exit(1);
@@ -32,6 +33,7 @@ app.use('/tean',require('./routes/TeanHomePage'));
 app.use('/gProject',require('./routes/getProjects'));
 app.use(cookieparser());
 app.use(session({secret: process.env["PRIVATEKEY"]}));
+
 
 const port = 4500;
 app.get('/', function (req, res) {
