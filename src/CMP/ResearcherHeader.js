@@ -10,14 +10,14 @@ export default function ResearcherHeader() {
         <div className="header" style={{
             backgroundColor: 'rebeccapurple',
             width: '100%',
-            position:'sticky',
+            position:'relative',
             zIndex:'9999',
         }}>
             <div style={{left:'10px',position: 'absolute', minWidth:'100%'}}>
                 <a href="/Research"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
                 </a>
             </div>
-            <div id='nav' style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
+            <div id='nav' style={{left:'50%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
                 <nav>
                     <ul className="StyleUl">
                         <Link
@@ -63,7 +63,7 @@ export default function ResearcherHeader() {
                             |
                         </li>
                         <li>
-                            <a href={"/Logout"}> Logout</a>
+                            <a href={"/"}> Logout</a>
                         </li>
                         {/*</Link>*/}
                     </ul>

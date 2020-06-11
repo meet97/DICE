@@ -35,12 +35,11 @@ router.post('/',async (req,res) =>{
     {
         const validRole = (user.role);
         if(validRole==="admin"){
-        var ses=req.session();
-            router.use(session({resave: true, saveUninitialized: true, secret: process.env["PRIVATEKEY"], cookie: { maxAge: 60000 }}));
-
             return res.redirect("/Admin");
         }
         else  {
+            req.session = req.body.email;
+            console.log(req.session)
             if(user.__v === 0)
                 return res.redirect("/PasswordChange");
             else

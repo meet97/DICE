@@ -19,7 +19,7 @@ export default function AdminHeader() {
                 <a href="/Admin"><img src={logo} alt={"Hello"} width={'200px'} height={'100px'}/>
                 </a>
             </div>
-            <div id='nav' style={{left:'55%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
+            <div id='nav' style={{left:'50%', bottom:'-50px', position: 'relative', minWidth:'100%'}}>
                 <nav>
                     <ul className='StyleUl'>
                         <Link
