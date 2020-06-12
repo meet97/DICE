@@ -313,6 +313,7 @@ td a{
     height: 200px;
     transition: .5s ease;
     backface-visibility: hidden;
+
 }
 .middle > text{
     transition: .5s ease;
@@ -333,6 +334,12 @@ td a{
 
 .key:hover .middle {
     opacity: 1;
+}
+.keyAreaTitle {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 12px 10px;
 }
 .text {
     font-weight: bold;
@@ -411,4 +418,9 @@ h3 {
     align-items: center;
     margin: 0;
     background: #adceed;
+}
+
+#cont td{
+    padding-top: 5px    ;
+    padding-bottom: 20px;
 }

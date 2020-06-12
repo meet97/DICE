@@ -7,12 +7,12 @@ const express = require('express');
 const {User} = require("../Models/Users");
 const app = express();
 const bodyParser = require('body-parser');
-
+const random = require('randomatic');
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/',async (req,res,next) => {
 
-    //res.send("forge is working");
+
     console.log(req.body.email);
 
      let user = await User.findOne({email : req.body.email})
@@ -23,7 +23,10 @@ app.post('/',async (req,res,next) => {
      }
      else{
          const token = jwt.sign({_id : user._id},process.env.PRIVATEKEY);
-         const resetLink = "http://"+process.env.HOST+":"+process.env.CLIENTPORT+"/PasswordChange?token=" + token
+         const resetLink = "http://"+process.env.HOST+":"+process.env.CLIENTPORT+"/PasswordChange/" + token
+
+            console.log(resetLink);
+
 
         var transporter = nodemailer.createTransport({
              service : 'gmail',
@@ -37,7 +40,9 @@ app.post('/',async (req,res,next) => {
              from    : 'process.env.MAIL_USERID',
              to      :  req.body.email ,
              subject : 'Reset password!' ,
-             text : 'Please click below link to reset your password! \n' + resetLink
+             text : 'Please use below code to reset your password! \n' + resetLink
+
+
          }
 
         transporter.sendMail(mailoptions, function(error,info){
@@ -53,4 +58,4 @@ app.post('/',async (req,res,next) => {
 
 });
 
-module.exports = app;
+    module.exports = app;

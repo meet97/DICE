@@ -4,13 +4,13 @@ import {SocialMediaIconsReact} from 'social-media-icons-react';
 
 export default function Copyright() {
     return (
-        <div id='Contact' style={{backgroundColor:'grey'}}>
+        <div id='Contact' style={{backgroundColor:'black'}}>
             <table id='cont'>
-                <tr style={{width:'55%'}}>
-                    <td><h3>Office</h3></td>
-                    <td><h3>Useful Links</h3></td>
+                <tr style={{width:'55%',color:'White', weight:'15px'}}>
+                    <td><h2>Office</h2></td>
+                    <td><h2>Useful Links</h2></td>
                 </tr>
-                <tr style={{width:'100%'}}>
+                <tr style={{width:'100%',color:'White'}}>
                     <td>
                         Room 304.10<br/>
                         Saskatchewan Polytechnic<br/> Saskatoon Campus, Idylwyld Dr.<br/>

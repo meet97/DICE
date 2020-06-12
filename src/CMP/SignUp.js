@@ -150,6 +150,7 @@ export default function SignUp() {
                                     <MenuItem value="">
                                         <em>None</em>
                                     </MenuItem>
+                                    <MenuItem value={'Admin'}>Admin</MenuItem>
                                     <MenuItem value={'Senior Researcher'}>Senior Researcher</MenuItem>
                                     <MenuItem value={'Technician'}>Technician</MenuItem>
                                     <MenuItem value={'Student'}>Student</MenuItem>

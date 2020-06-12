@@ -13,7 +13,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/', async (req, res) => {
 
-  console.log(req.body);
+
   // Validate The Request
   const { error } = validate(req.body);
   if (error) {
@@ -62,8 +62,12 @@ router.post('/', async (req, res) => {
     user.password = await bcrypt.hash(password,salt);
 
     await user.save();
-    const token = jwt.sign({_id:user._id},process.env.PRIVATEKEY);
-    res.header('x-auth-token', token).send(_.pick(user, ['_id', 'fname','lname','email','password','mobileNo','role']));
+
+    res.redirect('/Admin');
+    // const token = jwt.sign({_id:user._id},process.env.PRIVATEKEY);
+    // res.header('x-auth-token', token).send(_.pick(user, ['_id', 'fname','lname','email','password','mobileNo','role']));
+
+
 
   }
 });

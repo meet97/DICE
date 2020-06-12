@@ -4,6 +4,7 @@ import home2 from "../img/home2.jpg";
 import home3 from "../img/home3.jpg";
 import asset from "../img/asset.jpg";
 import tsn from "../img/tsn.png";
+import mesh from "../img/mesh.jpeg";
 import { Slide } from 'react-slideshow-image';
 
 
@@ -73,19 +74,25 @@ const homeContent = () => {
                     <div className='keyarea' style={{paddingTop:'50px', minWidth:'100%'}}>
                         <div className='key'>
                             <img src={asset} alt="Logo" className='image'/>
+
                             <div className="middle">
+                                <div className="keyAreaTitle">Asset Management</div>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
                             <img src={tsn} alt="Logo" className='image' />
+
                             <div className="middle">
+                                <div className="keyAreaTitle">Time Sensitive Networking</div>
                                 <div className="text">More Information</div>
                             </div>
                         </div>
                         <div className='key'>
-                            <img src={asset} alt={"asset Pic"} className='image' />
+                            <img src={mesh} alt={"asset Pic"} className='image' />
+
                             <div className="middle">
+                                <div className="keyAreaTitle">Mesh Network</div>
                                 <div className="text">More Information</div>
                             </div>
                         </div>

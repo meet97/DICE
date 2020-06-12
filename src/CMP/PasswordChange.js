@@ -40,12 +40,9 @@ const useStyles = makeStyles((theme) => ({
 export default function PasswordChange() {
     const classes = useStyles();
 
-    const [confirmpassword, setconfirmPassword] = useState("");
-    const [password, setPassword] = useState("");
 
-    function validateForm() {
-        return confirmpassword === password;
-    }
+
+
 
     return (
         <div>
@@ -63,27 +60,27 @@ export default function PasswordChange() {
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            placeholder="Enter new Password"
+                            placeholder="Enter Password"
                             required
                             fullWidth
                             name="password"
                             label="Password"
                             type="password"
                             id="password"
-                            onChange={e => setPassword(e.target.value)}
+
                             autoComplete="password"
                         />
                         <TextField
                             variant="outlined"
                             margin="normal"
-                            placeholder="Confirm password"
+                            placeholder="Enter New password"
                             required
                             fullWidth
-                            name="confirmpassword"
-                            label="Confirm Password"
+                            name="newpassword"
+                            label="New Password"
                             type="password"
-                            id="confirmpassword"
-                            onChange={e => setconfirmPassword(e.target.value)}
+                            id="newpassword"
+
                             autoComplete="current-password"
                         />
                         <Button
@@ -91,7 +88,7 @@ export default function PasswordChange() {
                             fullWidth
                             variant="contained"
                             color="primary"
-                            disabled={!validateForm()}
+
                             className={classes.submit}
                         >
                             Sign In

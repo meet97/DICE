@@ -7,36 +7,40 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
+const bcrypt = require("bcrypt");
+const bodyParser = require('body-parser');
 
+router.use(bodyParser.urlencoded({extended: true}));
 router.post('/', async(req,res) => {
 
-    if(req.header){
-        var token = req.params.token;
-        jwt.verify(token, process.env.PRIVATEKEY, (err, decoded) => {
-        if (err) {
-            return res.json({
-            success: false,
-            message: 'Token is not valid'
-          });
-        } else {
-            req.decoded = decoded;
 
+    const oldpassword = req.body.password;
+
+    const NewPassword = req.body.newpassword;
+
+    const user = await User.find();
+
+    while(user)
+    {
+        const validPassword =  bcrypt.compare(oldpassword, user.password);
+
+        if(validPassword){
+            const id = user.email;
+            console.log(id);
+           User.findOneAndUpdate({email: id},{password: NewPassword});
         }
-    });
-   }    console.log(User.password)  
-      let user = await  User.findOne({_id : req.decoded._id})
-      if(user){
-         user.password = req.body.NewPassword;
 
-          user.save(function(err,doc){
-            if(err){
-               res.send('not updated')
-            }
-            else{
+        else
+            res.send('not found');
 
-                res.send('updated successfully')
-            }
-         });
-      }
+    }
+
+    if(!user) {
+
+        return res.redirect('/PasswordChange');
+    }
+
+   res.send(user.email);
 });
+
 module.exports = router;
