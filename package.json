@@ -11,6 +11,7 @@
     "dotenv": "latest",
     "express": "^4.17.1",
     "express-generator-api": "^6.0.0",
+    "express-session": "^1.17.1",
     "gsap": "^3.2.6",
     "joi": "^14.3.1",
     "joi-objectid": "^3.0.1",

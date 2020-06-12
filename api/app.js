@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const cors= require('cors');
 const express = require('express');
 const app = express();
-const cookieparser = require('cookie-parser')
 const session = require('express-session');
 
 
@@ -31,7 +30,6 @@ app.use('/technician',require('./routes/Technician'));
 app.use('/student',require('./routes/Student'));
 app.use('/tean',require('./routes/TeanHomePage'));
 app.use('/gProject',require('./routes/getProjects'));
-app.use(cookieparser());
 app.use(session({secret: process.env["PRIVATEKEY"]}));
 
 

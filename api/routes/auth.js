@@ -11,7 +11,6 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({extended: true}));
-
 router.post('/',async (req,res) =>{
 
     const { error } = validate(req.body)
@@ -21,6 +20,7 @@ router.post('/',async (req,res) =>{
 
 
     let user = await User.findOne({email: req.body.email});
+
     if(!user) {
 
         return res.redirect('/signIn');
@@ -39,7 +39,7 @@ router.post('/',async (req,res) =>{
         }
         else  {
             req.session = req.body.email;
-            console.log(req.session)
+            console.log(req.session);
             if(user.__v === 0)
                 return res.redirect("/PasswordChange");
             else
