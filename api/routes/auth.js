@@ -7,10 +7,12 @@ const _ = require('lodash');
 const {User} = require('../Models/Users');
 const express = require('express');
 const router = express.Router();
-const session = require('express-session');
 const bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({extended: true}));
+
+
+
 router.post('/',async (req,res) =>{
 
     const { error } = validate(req.body)
@@ -19,8 +21,7 @@ router.post('/',async (req,res) =>{
     }
 
 
-    let user = await User.findOne({email: req.body.email});
-
+    var user = await User.findOne({email: req.body.email});
     if(!user) {
 
         return res.redirect('/signIn');
@@ -34,15 +35,21 @@ router.post('/',async (req,res) =>{
     else
     {
         const validRole = (user.role);
-        if(validRole==="admin"){
+        let email = user.email;
+        if(validRole==="Admin"){
             return res.redirect("/Admin");
         }
         else  {
-            req.session = req.body.email;
+            req.session.role = validRole;
+            req.session.email = email;
+            console.log(req.session.role);
+            console.log(req.session.email);
             console.log(req.session);
+            req.session.save();
             if(user.__v === 0)
                 return res.redirect("/PasswordChange");
             else
+
                 return res.redirect("/Research");
         }
 
@@ -65,6 +72,5 @@ function validate(req) {
 
     return Joi.validate(req, schema);
 }
-
 
 module.exports = router;

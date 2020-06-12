@@ -412,3 +412,8 @@ h3 {
     margin: 0;
     background: #adceed;
 }
+
+a{
+    color: rebeccapurple;
+    text-decoration: none;
+}
