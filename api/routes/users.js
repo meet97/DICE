@@ -13,7 +13,7 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/', async (req, res) => {
 
-
+  console.log(req.body);
   // Validate The Request
   const { error } = validate(req.body);
   if (error) {

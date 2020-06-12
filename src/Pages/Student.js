@@ -4,6 +4,7 @@ import 'tachyons';
 import PeopleList from "../CMP/PeopleList";
 import AdminHeader from "../CMP/AdminHeader";
 import Copyright from "../CMP/Footer";
+import PeopleDeleteList from "../CMP/PeopleDeleteList";
 
 class Student extends Component
 {
@@ -33,7 +34,7 @@ class Student extends Component
         const peopleList =this.state.team;
         console.log(this.state.team);
         const peopleHolher = peopleList.map( (temp, i) => {
-            return <PeopleList key={i} id={peopleList[i].id} name={peopleList[i].fname} work={peopleList[i].role}/>
+            return <PeopleDeleteList key={i} id={peopleList[i].id} name={peopleList[i].fname} work={peopleList[i].role}/>
         });
         return(
             <div>

@@ -313,7 +313,6 @@ td a{
     height: 200px;
     transition: .5s ease;
     backface-visibility: hidden;
-
 }
 .middle > text{
     transition: .5s ease;
@@ -418,6 +417,11 @@ h3 {
     align-items: center;
     margin: 0;
     background: #adceed;
+}
+
+a{
+    color: rebeccapurple;
+    text-decoration: none;
 }
 
 #cont td{

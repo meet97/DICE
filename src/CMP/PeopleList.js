@@ -3,7 +3,7 @@ import 'tachyons';
 
 const PeopleList = (props) => {
 
-    return (<div id='PeopleDiv' className="avatarLayout tc ma2 dib pa3" >
+    return (<div id='PeopleDiv' className="avatarLayout tc ma2 dib pa3 grow" >
             <div id='lol'>
         <img src={`https://joeschmoe.io/api/v1/${props.name}`} alt="Avatar" />
         <div id='PeopleName'>
