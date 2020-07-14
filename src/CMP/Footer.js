@@ -4,7 +4,7 @@ import {SocialMediaIconsReact} from 'social-media-icons-react';
 
 export default function Copyright() {
     return (
-        <div id='Contact' style={{backgroundColor:'black'}}>
+        <div id='Contact' style={{backgroundColor:'grey'}}>
             <table id='cont'>
                 <tr style={{width:'55%',color:'White', weight:'15px'}}>
                     <td><h2>Office</h2></td>

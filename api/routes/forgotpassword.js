@@ -7,7 +7,7 @@ const express = require('express');
 const {User} = require("../Models/Users");
 const app = express();
 const bodyParser = require('body-parser');
-const random = require('randomatic');
+// const random = require('randomatic');
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/',async (req,res,next) => {
